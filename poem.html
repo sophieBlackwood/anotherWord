@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Another Word</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poem | Another Word</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+<body class="fade-in">
 
-<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Another Word</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="poems.html">Poems</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header class="navbar">
-  <h1 class="logo">Another Word</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="poems.html">Poems</a>
-  </nav>
-</header>
+    <main class="container">
+        <div class="back-nav">
+            <a href="poems.html">← Back to all poems</a>
+        </div>
 
-<main class="poem-container">
-  <h1 id="poem-title"></h1>
-  <p id="poem-content"></p>
-</main>
+        <article class="poem-view">
+            <header class="poem-header">
+                <span id="poem-date" class="date-label"></span>
+                <h1 id="poem-title"></h1>
+            </header>
+            
+            <div id="poem-content" class="poem-body">
+                </div>
+        </article>
+    </main>
 
-<script src="data.js"></script>
-<script src="main.js"></script>
+    <footer>
+        <p>&copy; 2024 Another Word.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
