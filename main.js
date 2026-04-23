@@ -18,7 +18,7 @@ function createCard(p) {
     el.innerHTML = `
         <span class="card-date">${p.date || 'Recent'}</span>
         <h3 class="card-title">${p.title}</h3>
-        <p class="card-snippet">${p.content.substring(0, 80).replace(/\n/g, ' ')}...</p>
+        <p class="card-snippet">${p.content.substring(0, 100).replace(/\n/g, ' ')}...</p>
     `;
     
     el.onclick = () => goToPoem(p.id);
@@ -27,14 +27,12 @@ function createCard(p) {
 
 // ---------- PAGE INITIALIZATION ----------
 document.addEventListener("DOMContentLoaded", () => {
-    // Trigger entry animation
     document.body.classList.add("fade-in");
 
     // Elements
     const featuredList = document.getElementById("featured-list");
     const allEl = document.getElementById("all-poems");
     const searchInput = document.getElementById("search");
-    const tagContainer = document.getElementById("tags");
     const titleEl = document.getElementById("poem-title");
     const contentEl = document.getElementById("poem-content");
     const dateEl = document.getElementById("poem-date");
@@ -42,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // --- 1. HOMEPAGE LOGIC ---
     if (featuredList) {
-        // Only show poems where 'featured: true' in data.js
         const featured = poems.filter(p => p.featured);
         featured.forEach(p => featuredList.appendChild(createCard(p)));
     }
@@ -51,47 +48,35 @@ document.addEventListener("DOMContentLoaded", () => {
         authorBlurb.textContent = author.blurb;
     }
 
-    // --- 2. ARCHIVE PAGE LOGIC ---
+    // --- 2. ARCHIVE PAGE LOGIC (Invisible Tag Search) ---
     if (allEl) {
         const render = (list) => {
             allEl.innerHTML = "";
             if (list.length === 0) {
-                allEl.innerHTML = `<p style="color: var(--muted); grid-column: 1/-1; text-align: center;">No poems found matching that search.</p>`;
+                allEl.innerHTML = `<p style="color: var(--muted); grid-column: 1/-1; text-align: center; font-family: 'Playfair Display', serif; font-style: italic; margin-top: 2rem;">The words you seek haven't surfaced yet.</p>`;
                 return;
             }
             list.forEach(p => allEl.appendChild(createCard(p)));
         };
 
-        // Initial Render
         render(poems);
 
-        // Search Implementation
         if (searchInput) {
             searchInput.addEventListener("input", e => {
                 const query = e.target.value.toLowerCase();
-                const filtered = poems.filter(p => 
-                    p.title.toLowerCase().includes(query) || 
-                    p.content.toLowerCase().includes(query)
-                );
-                render(filtered);
-            });
-        }
-
-        // Dynamic Tag Filtering
-        if (tagContainer) {
-            const tags = [...new Set(poems.flatMap(p => p.tags))];
-            tags.forEach(tag => {
-                const btn = document.createElement("button");
-                btn.textContent = tag;
-                btn.onclick = () => {
-                    // Toggle active class logic
-                    document.querySelectorAll('#tags button').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
+                
+                const filtered = poems.filter(p => {
+                    // Search Title
+                    const inTitle = p.title.toLowerCase().includes(query);
+                    // Search Content
+                    const inContent = p.content.toLowerCase().includes(query);
+                    // Search Tags (Invisible Keywords)
+                    const inTags = p.tags.some(tag => tag.toLowerCase().includes(query));
                     
-                    const filtered = poems.filter(p => p.tags.includes(tag));
-                    render(filtered);
-                };
-                tagContainer.appendChild(btn);
+                    return inTitle || inContent || inTags;
+                });
+                
+                render(filtered);
             });
         }
     }
@@ -103,7 +88,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (poem) {
             titleEl.textContent = poem.title;
-            // Preserves line breaks and handles basic bold/italic formatting
             contentEl.innerHTML = poem.content
                 .replace(/\n/g, "<br>")
                 .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
@@ -112,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (dateEl) dateEl.textContent = poem.date;
             document.title = `${poem.title} | Another Word`;
         } else {
-            titleEl.textContent = "Poem Not Found";
+            titleEl.textContent = "Empty Waters";
             contentEl.textContent = "The piece you are looking for has drifted away.";
         }
     }
