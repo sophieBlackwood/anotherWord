@@ -1,33 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Poems</title>
-<link rel="stylesheet" href="style.css">
-</head>
+.archive-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
 
-<body>
+.archive-header h1 {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--accent);
+}
 
-<header class="navbar">
-  <h1 class="logo">Another Word</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
+.archive-header p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
 
-<main class="container">
+.search-wrapper {
+    max-width: 500px;
+    margin: 0 auto 2rem auto;
+}
 
-<input id="search" class="search" placeholder="Search">
+.tag-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 4rem;
+}
 
-<div id="tags"></div>
-
-<div id="all-poems" class="grid"></div>
-
-</main>
-
-<script src="data.js"></script>
-<script src="main.js"></script>
-</body>
-</html>
+/* Ensure the grid looks intentional */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
