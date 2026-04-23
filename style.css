@@ -1,11 +1,12 @@
 :root {
-  --bg: #f2f4f7;         /* Very soft blue-grey wash */
-  --surface: #ffffff;    /* Pure white */
-  --text: #1a1c1e;       /* Almost black for high readability */
-  --muted: #5c6b7a;      /* Muted steel blue */
-  --accent: #3d5a80;     /* Gentle deep denim blue */
-  --soft: #e0e6ed;       /* Light blue-grey borders */
-  --shadow: rgba(0, 0, 0, 0.06);
+  /* Midnight Palette */
+  --bg: #0a0c10;         /* Deep Black-Blue */
+  --surface: #161b22;    /* Dark Navy for cards/sections */
+  --text: #e6edf3;       /* Bright off-white for contrast */
+  --muted: #8b949e;      /* Soft grey-blue */
+  --accent: #58a6ff;     /* Gentle glowing blue */
+  --soft: #21262d;       /* Subtle borders */
+  --shadow: rgba(0, 0, 0, 0.4);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -24,7 +25,7 @@ body.fade-out { opacity: 0; }
 
 /* Navigation */
 header {
-  background: var(--surface);
+  background: var(--bg); /* Keep header dark */
   border-bottom: 1px solid var(--soft);
   position: sticky;
   top: 0;
@@ -42,7 +43,7 @@ header {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.3rem;
-  color: var(--text); /* Black logo for contrast */
+  color: var(--accent); /* Logo glows in blue */
 }
 
 .nav-links { list-style: none; display: flex; gap: 2rem; }
@@ -53,7 +54,7 @@ header {
   transition: color 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active { color: var(--accent); }
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
 
 /* Layout & Containers */
 .container { max-width: 1000px; margin: 4rem auto; padding: 0 2rem; }
@@ -73,6 +74,7 @@ header {
   gap: 2rem;
 }
 
+/* Gentle colored section background */
 .card {
   background: var(--surface);
   padding: 2.5rem;
@@ -80,32 +82,56 @@ header {
   cursor: pointer;
   border: 1px solid var(--soft);
   box-shadow: 0 4px 12px var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  background: #1c2128; /* Slightly lighter on hover */
+  border-color: var(--accent);
 }
 
-.card-date { display: block; font-size: 0.7rem; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase; }
+.card-date { display: block; font-size: 0.7rem; color: var(--muted); margin-bottom: 0.5rem; }
 .card-title { color: var(--accent); margin-bottom: 0.8rem; font-weight: 600; }
 .card-snippet { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
 
-/* Poem View */
+/* Poem View (The Gentle Background Section) */
 .poem-view {
-  max-width: 650px;
+  max-width: 700px;
   margin: 0 auto;
   padding: 4rem;
-  background: var(--surface);
-  border-radius: 8px;
+  background: var(--surface); /* Gentle dark blue background */
+  border-radius: 15px;
+  border: 1px solid var(--soft);
 }
 
-.poem-body { line-height: 2.2; font-size: 1.15rem; white-space: pre-line; }
+.poem-body { line-height: 2.2; font-size: 1.15rem; white-space: pre-line; color: #d1d5db; }
+
+/* Search Bar (Dark Mode) */
+.search {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--soft);
+  border-radius: 30px;
+  color: var(--text);
+  margin-bottom: 2rem;
+  outline: none;
+}
+
+.search:focus { border-color: var(--accent); }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 5rem 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
 
 /* Mobile */
 @media (max-width: 768px) {
   .navbar { flex-direction: column; gap: 1rem; }
   .grid { grid-template-columns: 1fr; }
-  .poem-view { padding: 2rem 1rem; background: transparent; }
+  .poem-view { padding: 2rem 1.5rem; }
 }
