@@ -1,19 +1,14 @@
 :root {
-  /* Seaglass Sanctuary Inspired Palette */
-  --bg: #f7faf9;         /* Very soft mint-white */
-  --surface: #ffffff;    /* Pure white for cards */
-  --text: #2c3e41;       /* Deep slate-teal for text */
-  --muted: #78909c;      /* Muted blue-grey */
-  --accent: #5e9393;     /* The signature Seaglass Teal */
-  --soft: #eef4f3;       /* Hover states / light borders */
-  --shadow: rgba(0, 0, 0, 0.04);
+  --bg: #f2f4f7;         /* Very soft blue-grey wash */
+  --surface: #ffffff;    /* Pure white */
+  --text: #1a1c1e;       /* Almost black for high readability */
+  --muted: #5c6b7a;      /* Muted steel blue */
+  --accent: #3d5a80;     /* Gentle deep denim blue */
+  --soft: #e0e6ed;       /* Light blue-grey borders */
+  --shadow: rgba(0, 0, 0, 0.06);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   background: var(--bg);
@@ -22,18 +17,12 @@ body {
   opacity: 0;
   transition: opacity 0.6s ease-in-out;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
 }
 
-body.fade-in {
-  opacity: 1;
-}
+body.fade-in { opacity: 1; }
+body.fade-out { opacity: 0; }
 
-body.fade-out {
-  opacity: 0;
-}
-
-/* NAV - Right-aligned and elegant */
+/* Navigation */
 header {
   background: var(--surface);
   border-bottom: 1px solid var(--soft);
@@ -53,190 +42,70 @@ header {
   text-decoration: none;
   font-weight: 600;
   font-size: 1.3rem;
-  letter-spacing: -0.5px;
-  color: var(--accent);
+  color: var(--text); /* Black logo for contrast */
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
+.nav-links { list-style: none; display: flex; gap: 2rem; }
 .nav-links a {
   text-decoration: none;
   color: var(--muted);
   font-size: 0.95rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-.nav-links a:hover, .nav-links a.active {
-  color: var(--accent);
-}
+.nav-links a:hover, .nav-links a.active { color: var(--accent); }
 
-/* LAYOUT */
-.container {
-  max-width: 1000px;
-  margin: 4rem auto;
-  padding: 0 2rem;
-}
-
-/* HERO SECTION */
-.hero {
-  margin-bottom: 4rem;
-  text-align: left;
-}
+/* Layout & Containers */
+.container { max-width: 1000px; margin: 4rem auto; padding: 0 2rem; }
 
 .hero h1 {
   font-size: 2.5rem;
   font-weight: 300;
-  color: var(--accent);
+  color: var(--text);
   line-height: 1.2;
+  margin-bottom: 4rem;
 }
 
-/* CAROUSEL & GRID */
-.carousel {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  padding: 1rem 0 2.5rem 0;
-  scrollbar-width: none;
-}
-
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
+/* Cards & Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-/* CARDS */
 .card {
   background: var(--surface);
-  padding: 2rem;
-  border-radius: 15px;
-  min-width: 280px;
+  padding: 2.5rem;
+  border-radius: 12px;
   cursor: pointer;
   border: 1px solid var(--soft);
   box-shadow: 0 4px 12px var(--shadow);
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
-.card-date {
-  display: block;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
-}
+.card-date { display: block; font-size: 0.7rem; color: var(--muted); margin-bottom: 0.5rem; text-transform: uppercase; }
+.card-title { color: var(--accent); margin-bottom: 0.8rem; font-weight: 600; }
+.card-snippet { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
 
-.card-title {
-  font-size: 1.2rem;
-  color: var(--accent);
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-}
-
-.card-snippet {
-  font-size: 0.9rem;
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-/* SEARCH & TAGS */
-.search-wrapper {
-    max-width: 600px;
-    margin: 0 auto 3rem auto;
-}
-
-.search {
-  width: 100%;
-  padding: 1rem 1.5rem;
-  background: var(--surface);
-  border: 1px solid var(--soft);
-  border-radius: 30px;
-  color: var(--text);
-  font-size: 1rem;
-  outline: none;
-  box-shadow: 0 2px 8px var(--shadow);
-  transition: border-color 0.3s;
-}
-
-.search:focus {
-  border-color: var(--accent);
-}
-
-#tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-  margin-bottom: 3rem;
-}
-
-#tags button {
-  background: var(--surface);
-  border: 1px solid var(--soft);
-  padding: 0.6rem 1.2rem;
-  border-radius: 20px;
-  color: var(--muted);
-  cursor: pointer;
-  font-size: 0.85rem;
-  transition: all 0.25s ease;
-}
-
-#tags button:hover, #tags button.active {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
-  box-shadow: 0 4px 10px rgba(94, 147, 147, 0.3);
-}
-
-/* POEM VIEW */
+/* Poem View */
 .poem-view {
   max-width: 650px;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 4rem;
   background: var(--surface);
-  border-radius: 12px;
-  box-shadow: 0 10px 40px var(--shadow);
+  border-radius: 8px;
 }
 
-.poem-view h1 {
-  margin-bottom: 2.5rem;
-  font-weight: 600;
-  color: var(--accent);
-  text-align: center;
-}
+.poem-body { line-height: 2.2; font-size: 1.15rem; white-space: pre-line; }
 
-.poem-body {
-  color: var(--text);
-  line-height: 2.2;
-  font-size: 1.15rem;
-  white-space: pre-line;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 5rem 0;
-  color: var(--muted);
-  font-size: 0.85rem;
-}
-
-/* RESPONSIVE */
+/* Mobile */
 @media (max-width: 768px) {
-  .navbar { padding: 1.5rem 5%; }
-  .hero h1 { font-size: 2rem; }
-  .poem-view { padding: 2.5rem 1.5rem; }
-  .container { margin: 2rem auto; }
+  .navbar { flex-direction: column; gap: 1rem; }
+  .grid { grid-template-columns: 1fr; }
+  .poem-view { padding: 2rem 1rem; background: transparent; }
 }
