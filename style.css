@@ -1,15 +1,27 @@
+/* ANOTHER WORD - COMPLETE MIDNIGHT CSS
+  Palette: Midnight Black, Deep Navy, & Glowing Sky Blue
+*/
+
 :root {
-  --bg: #0a0c10;
-  --surface: rgba(22, 27, 34, 0.7); /* Translucent for glass effect */
-  --text: #e6edf3;
-  --muted: #8b949e;
-  --accent: #58a6ff;
-  --soft: rgba(255, 255, 255, 0.1);
+  --bg: #0a0c10;                /* Deep Midnight Black */
+  --surface: rgba(22, 27, 34, 0.7); /* Translucent Navy for Glass effect */
+  --text: #e6edf3;              /* Bright off-white */
+  --muted: #8b949e;             /* Muted blue-grey */
+  --accent: #58a6ff;            /* Glowing sky blue */
+  --soft: rgba(255, 255, 255, 0.1); /* Subtle glass borders */
   --shadow: rgba(0, 0, 0, 0.5);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+/* --- Base Setup --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--bg);
@@ -17,52 +29,122 @@ body {
   font-family: 'Inter', sans-serif;
   opacity: 0;
   transition: opacity 0.8s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body.fade-in { opacity: 1; }
+body.fade-out { opacity: 0; }
 
-/* Navigation */
+/* --- Navigation --- */
 header {
   background: rgba(10, 12, 16, 0.8);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--soft);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-.navbar { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 10%; }
-.logo a { text-decoration: none; font-weight: 600; color: var(--accent); letter-spacing: -0.5px; }
-.nav-links { list-style: none; display: flex; gap: 2rem; }
-.nav-links a { text-decoration: none; color: var(--muted); font-size: 0.9rem; transition: 0.3s; }
-.nav-links a:hover { color: var(--text); }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 10%;
+}
 
-/* Fullscreen Hero (Scroll Indicator Removed) */
+.logo a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  color: var(--text);
+}
+
+/* --- Fullscreen Hero --- */
 .fullscreen-hero {
+  position: relative;
   height: calc(100vh - 70px);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   background: url('hero.jpg') no-repeat center center/cover;
-  position: relative;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(10,12,16,0.2), var(--bg));
+  background: linear-gradient(
+    to bottom, 
+    rgba(10, 12, 16, 0.2) 0%, 
+    var(--bg) 100%
+  );
+  z-index: 1;
 }
 
-.hero-content { position: relative; z-index: 2; text-align: center; }
-.hero-content h1 { font-size: clamp(2.5rem, 8vw, 5rem); font-weight: 200; letter-spacing: -2px; }
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
 
-/* Jazzing up the Cards */
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 3rem; }
+.hero-content h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 200;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+/* --- Main Layout & Titles --- */
+.container {
+  max-width: 1100px;
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.section-label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  color: var(--accent);
+  margin-bottom: 3rem;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* --- Jazzy Glass Cards --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 3rem;
+}
 
 .card {
   background: var(--surface);
-  backdrop-filter: blur(10px); /* Glassmorphism */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 3rem;
   border-radius: 20px;
   border: 1px solid var(--soft);
@@ -72,30 +154,36 @@ header {
   overflow: hidden;
 }
 
-/* Subtle glowing accent line on the side of cards */
 .card::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 20%;
-    height: 60%;
-    width: 2px;
-    background: var(--accent);
-    opacity: 0;
-    transition: 0.5s;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 25%;
+  height: 50%;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .card:hover {
   transform: translateY(-10px) scale(1.02);
   border-color: rgba(88, 166, 255, 0.4);
   background: rgba(30, 35, 45, 0.8);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .card:hover::before { opacity: 1; }
 
+.card-date {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
 .card-title {
-  font-family: 'Playfair Display', serif; /* Literate/Jazz feel */
+  font-family: 'Playfair Display', serif;
   font-size: 1.6rem;
   font-style: italic;
   margin-bottom: 1.2rem;
@@ -109,89 +197,96 @@ header {
   mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
 }
 
-/* --- MODERN GLASSY SEARCH --- */
+/* --- Modern Glassy Search --- */
 .search-wrapper {
-    max-width: 600px;
-    margin: 0 auto 5rem;
-    position: relative;
-    padding: 0 1rem;
+  max-width: 600px;
+  margin: 0 auto 5rem;
+  text-align: center;
 }
 
 .search {
-    width: 100%;
-    padding: 1.5rem 2.5rem;
-    
-    /* Glassmorphism Effect */
-    background: rgba(255, 255, 255, 0.03); 
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    
-    /* Borders & Shape */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 100px; /* Pill shape */
-    
-    /* Typography */
-    color: var(--text);
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    text-align: center;
-    letter-spacing: 0.5px;
-    
-    /* Animation */
-    outline: none;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.search::placeholder {
-    color: var(--muted);
-    opacity: 0.6;
-    font-family: 'Inter', sans-serif; /* Keep placeholder simple */
-    font-style: normal;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-/* Hover & Focus States */
-.search:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  padding: 1.5rem 2.5rem;
+  background: var(--surface);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--soft);
+  border-radius: 100px;
+  color: var(--text);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-style: italic;
+  outline: none;
+  transition: all 0.4s ease;
+  text-align: center;
 }
 
 .search:focus {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: var(--accent);
-    box-shadow: 0 0 20px rgba(88, 166, 255, 0.2), 
-                inset 0 0 10px rgba(88, 166, 255, 0.1);
-    transform: scale(1.02);
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px rgba(88, 166, 255, 0.15);
+  transform: scale(1.02);
 }
 
-/* Optional: Add a subtle glow behind the search bar */
-.search-wrapper::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 100%;
-    background: var(--accent);
-    filter: blur(60px);
-    opacity: 0.05;
-    z-index: -1;
-    transform: translate(-50%, -50%);
+/* --- Author Section --- */
+.about-author-section {
+  padding: 8rem 0;
+  border-top: 1px solid var(--soft);
+  margin-top: 4rem;
 }
 
-/* Poem View */
-.poem-view { max-width: 700px; margin: 0 auto; padding: 5rem; background: var(--surface); border-radius: 24px; }
-.poem-body { font-size: 1.2rem; line-height: 2.4; color: #cbd5e1; }
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
 
-/* About Section */
-.about-container { display: flex; align-items: center; gap: 4rem; padding: 10rem 0; }
-.about-image img { width: 100%; border-radius: 30px; filter: contrast(1.1) grayscale(0.5); }
+.about-image { flex: 1; max-width: 400px; }
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid var(--soft);
+  filter: grayscale(40%) contrast(1.1);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
 
+.about-text { flex: 1.5; }
+.about-text .section-label { text-align: left; margin-bottom: 1.5rem; }
+.about-text p { font-size: 1.15rem; line-height: 1.8; color: var(--muted); }
+
+/* --- Poem Page --- */
+.poem-view {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 5rem;
+  background: var(--surface);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--soft);
+  border-radius: 24px;
+}
+
+.poem-body {
+  font-size: 1.2rem;
+  line-height: 2.4;
+  color: #cbd5e1;
+  white-space: pre-line;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 6rem 0;
+  border-top: 1px solid var(--soft);
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
-  .about-container { flex-direction: column; text-align: center; }
-  .poem-view { padding: 2rem; background: transparent; }
+  .navbar { flex-direction: column; gap: 1.5rem; }
+  .about-container { flex-direction: column; text-align: center; gap: 2.5rem; }
+  .about-text .section-label { text-align: center; }
+  .about-image { max-width: 280px; }
+  .poem-view { padding: 3rem 1.5rem; background: transparent; border: none; }
+  .hero-content h1 { font-size: 2.2rem; }
 }
