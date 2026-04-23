@@ -1,31 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Another Word</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another Word | A Poetry Sanctuary</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+<body class="fade-in">
 
-<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">Another Word</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="poems.html">Poems</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header class="navbar">
-  <h1 class="logo">Another Word</h1>
-  <nav>
-    <a href="poems.html">Poems</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
+    <main class="container">
+        <section class="hero">
+            <h1>Fragments of thought, <br>smoothed by time.</h1>
+        </section>
 
-<section class="carousel" id="featured"></section>
+        <section class="section-label">Featured Works</section>
+        <div class="carousel" id="featured">
+            </div>
 
-<section class="list-section" id="recent"></section>
+        <section class="section-label">Recent Additions</section>
+        <div class="grid" id="recent">
+            </div>
 
-<section class="author">
-  <p id="author-blurb"></p>
-</section>
+        <section class="author-box">
+            <div class="author-content">
+                <p id="author-blurb"></p>
+            </div>
+        </section>
+    </main>
 
-<script src="data.js"></script>
-<script src="main.js"></script>
+    <footer>
+        <p>&copy; 2024 Another Word.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Smooth fade-in effect on load
+        window.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('fade-in');
+        });
+    </script>
 </body>
 </html>
