@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Archive | Another Word</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="fade-in">
     <header>
         <nav class="navbar">
             <div class="logo"><a href="index.html">Another Word</a></div>
@@ -17,11 +17,19 @@
             </ul>
         </nav>
     </header>
+
     <main class="container">
-        <input id="search" class="search" placeholder="Search the archive...">
-        <div id="tags" style="margin: 2rem 0; display: flex; gap: 10px; justify-content: center;"></div>
+        <div class="search-wrapper">
+            <input id="search" class="search" placeholder="Begin typing a title...">
+        </div>
+
         <div id="all-poems" class="grid"></div>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Another Word.</p>
+    </footer>
+
     <script src="data.js"></script>
     <script src="main.js"></script>
 </body>
