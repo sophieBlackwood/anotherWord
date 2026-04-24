@@ -36,7 +36,7 @@ And so we know that life is that
   {
     id: 2,
     title: "Cycle of life",
-    date: "Unknown",
+    date: "12/14/24",
     content: `When you look at the world, what do you see?
 This is what the world looks like to me:
 I see trials and pain
@@ -86,7 +86,7 @@ Till death do I end
 And still start again
 A cycle of life
 Though full of strife
-Will always be blessed to me.
+Will always be blessed to me.”
 `,
     tags: ["Cycle of Life", "life"],
     featured: false
