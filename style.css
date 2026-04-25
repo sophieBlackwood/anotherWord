@@ -1,22 +1,32 @@
+/* MIDNIGHT SIFT - MASTER STYLESHEET
+    Standardized for Index, Archive, and Poem views.
+*/
+
 :root {
     --bg: #0a0c10;
     --surface: #161b22;
+    --card-bg: #1c2128;
     --text: #f0f6fc;
     --muted: #8b949e;
     --accent: #58a6ff;
     --border: rgba(255, 255, 255, 0.1);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
 body { 
     background: var(--bg); 
     color: var(--text); 
     font-family: 'Inter', sans-serif; 
     line-height: 1.6;
-    -webkit-font-smoothing: antialiased; /* Makes fonts look sharper on Mac */
+    -webkit-font-smoothing: antialiased;
 }
 
-/* --- Prominent Navigation --- */
+/* --- NAVIGATION --- */
 header {
     background: rgba(10, 12, 16, 0.95);
     backdrop-filter: blur(15px);
@@ -25,55 +35,76 @@ header {
     top: 0;
     z-index: 1000;
 }
+
 .navbar { 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
-    padding: 2rem 8%; 
+    padding: 2.2rem 8%; 
     max-width: 1400px; 
     margin: 0 auto; 
 }
+
 .logo a { 
     text-decoration: none; 
     color: var(--text); 
-    font-size: 1.4rem; 
+    font-size: 1.5rem; 
     font-weight: 700; 
     letter-spacing: 4px; 
     text-transform: uppercase; 
 }
+
 .logo span { color: var(--accent); }
+
 .nav-links { display: flex; gap: 3rem; list-style: none; }
+
 .nav-links a { 
     text-decoration: none; 
     color: var(--muted); 
-    font-size: 0.85rem; 
+    font-size: 0.9rem; 
     text-transform: uppercase; 
     letter-spacing: 2px; 
     transition: 0.3s; 
 }
+
 .nav-links a:hover, .nav-links a.active { color: var(--text); }
 
-/* --- Reliable Hero Section --- */
-.fullscreen-hero {
+/* --- HERO SECTIONS --- */
+.fullscreen-hero, .poem-hero-visual {
     position: relative;
     width: 100%;
-    height: 75vh;
-    background: #000 url('hero.jpg') no-repeat center center / cover;
+    background-color: #0d1117; /* Fallback color */
+    background-image: url('hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
-.hero-overlay { 
+
+.fullscreen-hero { height: 75vh; background-position: center center; }
+.poem-hero-visual { height: 50vh; background-position: center 30%; }
+
+.hero-overlay, .poem-hero-overlay { 
     position: absolute; 
     inset: 0; 
     background: linear-gradient(to bottom, rgba(10, 12, 16, 0.3) 0%, var(--bg) 100%); 
+    z-index: 1;
 }
-.hero-content { position: relative; z-index: 2; text-align: center; }
-.hero-content h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 200; letter-spacing: -3px; line-height: 1; }
-.hero-content p { color: var(--accent); letter-spacing: 5px; text-transform: uppercase; font-size: 0.8rem; margin-top: 1rem; }
 
-/* --- Grid & Cards --- */
-.container { max-width: 1300px; margin: 0 auto; padding: 6rem 2rem; }
+.hero-content, .poem-hero-content { position: relative; z-index: 2; padding: 0 2rem; }
+
+.hero-content h1 { font-size: clamp(3rem, 10vw, 6rem); font-weight: 200; letter-spacing: -3px; }
+.poem-hero-content h1 { font-size: clamp(2rem, 6vw, 3.5rem); margin-top: 10px; }
+
+/* --- CONTAINERS & LABELS --- */
+.container { 
+    max-width: 1300px; 
+    margin: 0 auto; 
+    padding: 6rem 2rem; 
+}
+
 .section-label { 
     display: block; 
     text-transform: uppercase; 
@@ -82,8 +113,16 @@ header {
     color: var(--accent); 
     margin-bottom: 3rem; 
     text-align: center; 
+    font-weight: 600;
 }
-.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+
+/* --- GRID & CARDS --- */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2.5rem; 
+}
+
 .card { 
     background: var(--surface); 
     border: 1px solid var(--border); 
@@ -92,16 +131,43 @@ header {
     cursor: pointer; 
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); 
 }
-.card:hover { border-color: var(--accent); transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+
+.card:hover { 
+    border-color: var(--accent); 
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4); 
+}
+
 .card h2 { font-size: 1.6rem; font-weight: 400; margin: 1.5rem 0 1rem; color: var(--text); }
 .card p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
 
-/* --- Glassy Search --- */
-.search-wrapper { max-width: 650px; margin: 2rem auto 5rem; }
+/* --- CAROUSEL (HOME PAGE) --- */
+.carousel-container { 
+    width: 100%; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    scrollbar-width: none; 
+    padding: 2rem 0; 
+}
+
+.carousel-container::-webkit-scrollbar { display: none; }
+
+.carousel-track { 
+    display: flex; 
+    gap: 2rem; 
+    padding: 0 8%; 
+}
+
+.carousel-track .card { flex: 0 0 380px; scroll-snap-align: center; }
+
+/* --- SEARCH BAR --- */
+.search-wrapper { max-width: 650px; margin: 0 auto 5rem; }
+
 .search { 
     width: 100%; 
     padding: 1.5rem; 
     background: rgba(255, 255, 255, 0.03); 
+    backdrop-filter: blur(10px);
     border: 1px solid var(--border); 
     border-radius: 100px; 
     color: var(--text); 
@@ -110,26 +176,14 @@ header {
     outline: none; 
     transition: 0.3s;
 }
+
 .search:focus { border-color: var(--accent); background: rgba(255, 255, 255, 0.07); }
 
-/* --- Poem Page Revamp --- */
-.poem-hero-visual {
-    position: relative;
-    height: 50vh;
-    background: #000 url('hero.jpg') no-repeat center 30% / cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.poem-hero-overlay { 
-    position: absolute; 
-    inset: 0; 
-    background: linear-gradient(to bottom, rgba(10, 12, 16, 0.4) 0%, var(--bg) 95%); 
-}
+/* --- POEM ARTICLE VIEW --- */
 .poem-container { 
     max-width: 800px; 
     margin: -8rem auto 10rem; 
-    background: #1c2128; 
+    background: var(--card-bg); 
     padding: 6rem; 
     border-radius: 12px; 
     border: 1px solid var(--border); 
@@ -137,6 +191,7 @@ header {
     z-index: 10;
     box-shadow: 0 50px 100px rgba(0,0,0,0.8);
 }
+
 .poem-body { 
     font-size: 1.1rem; 
     line-height: 2.2; 
@@ -145,18 +200,79 @@ header {
     font-weight: 300;
 }
 
-/* --- About Author --- */
-.about-author-section { padding: 8rem 0; border-top: 1px solid var(--border); }
-.about-container { display: flex; align-items: center; gap: 5rem; max-width: 1000px; margin: 0 auto; }
-.about-image img { width: 300px; height: 300px; object-fit: cover; border-radius: 4px; filter: grayscale(100%); }
+.poem-footer-nav {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+}
 
-footer { padding: 6rem 0; text-align: center; opacity: 0.4; font-size: 0.7rem; letter-spacing: 3px; border-top: 1px solid var(--border); }
+.poem-footer-nav a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-/* Responsive */
-@media (max-width: 1100px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 800px) { 
-    .grid { grid-template-columns: 1fr; } 
+/* --- AUTHOR SECTION --- */
+.about-author-section { 
+    padding: 8rem 0; 
+    border-top: 1px solid var(--border); 
+}
+
+.about-container { 
+    display: flex; 
+    align-items: center; 
+    gap: 5rem; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+.about-image img { 
+    width: 320px; 
+    height: 320px; 
+    object-fit: cover; 
+    border-radius: 4px; 
+    filter: grayscale(100%); 
+    opacity: 0.8;
+}
+
+.about-text { flex: 1; }
+
+#author-blurb {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--muted);
+    font-weight: 300;
+    margin-top: 1.5rem;
+}
+
+/* --- FOOTER --- */
+footer { 
+    padding: 6rem 0; 
+    text-align: center; 
+    opacity: 0.4; 
+    font-size: 0.75rem; 
+    letter-spacing: 3px; 
+    text-transform: uppercase;
+    border-top: 1px solid var(--border); 
+}
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 1100px) { 
+    .grid { grid-template-columns: repeat(2, 1fr); } 
+}
+
+@media (max-width: 850px) { 
     .about-container { flex-direction: column; text-align: center; }
-    .poem-container { padding: 3rem 1.5rem; margin-top: 2rem; }
+    .about-image img { width: 100%; max-width: 300px; height: auto; }
+}
+
+@media (max-width: 700px) { 
+    .grid { grid-template-columns: 1fr; } 
+    .poem-container { padding: 3rem 1.5rem; margin: 2rem 1rem 6rem; }
     .hero-content h1 { font-size: 3.5rem; }
+    .navbar { padding: 1.5rem 5%; }
+    .nav-links { gap: 1.5rem; }
 }
