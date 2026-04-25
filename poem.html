@@ -3,28 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poem | Another Word</title>
+    <title>Poem | Midnight Sift</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="navbar">
-            <div class="logo"><a href="index.html">Another Word</a></div>
+            <div class="logo">
+                <div class="logo-icon">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+                <a href="index.html">Midnight <span>Sift</span></a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="poems.html">Poems</a></li>
+                <li><a href="archive.html">Archive</a></li>
             </ul>
         </nav>
     </header>
+
     <main class="container">
         <article class="poem-view">
-            <span id="poem-date" class="card-date" style="text-align: center;"></span>
-            <h1 id="poem-title" style="text-align: center; margin-bottom: 3rem;"></h1>
-            <div id="poem-content" class="poem-body"></div>
+            <header class="poem-header" style="margin-bottom: 4rem;">
+                <span id="poem-date" class="card-date"></span>
+                <h1 id="poem-title" class="card-title" style="font-size: 2.5rem; margin-top: 1rem;"></h1>
+            </header>
+            
+            <div id="poem-content" class="poem-body">
+                </div>
+            
+            <footer class="poem-footer" style="margin-top: 8rem; border-top: none; padding: 0;">
+                <a href="archive.html" style="text-decoration: none; color: var(--accent); font-size: 0.8rem; letter-spacing: 1px;">
+                    ← Return to Archive
+                </a>
+            </footer>
         </article>
     </main>
+
     <script src="data.js"></script>
-    <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Smoothly fade in the content
+            document.body.classList.add("fade-in");
+
+            // Get the ID from the URL (e.g., poem.html?id=1)
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get("id");
+            const poem = poems.find(p => p.id == id);
+
+            if (poem) {
+                document.getElementById("poem-title").textContent = poem.title;
+                document.getElementById("poem-date").textContent = poem.date;
+                // Preserve line breaks from the data.js string
+                document.getElementById("poem-content").innerHTML = poem.content.replace(/\n/g, '<br>');
+                document.title = `${poem.title} | Midnight Sift`;
+            } else {
+                // If poem not found, redirect back to archive
+                window.location.href = "archive.html";
+            }
+        });
+    </script>
 </body>
 </html>
