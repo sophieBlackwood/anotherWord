@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poem | Midnight Sift</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,24 +18,25 @@
         </nav>
     </header>
 
-    <div class="poem-hero">
-        <span id="poem-date" style="color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;"></span>
-        <h1 id="poem-title" style="font-size: 3.5rem; margin-top: 1rem;"></h1>
+    <div class="poem-hero-visual">
+        <div class="poem-hero-overlay"></div>
+        <div class="poem-hero-content">
+            <span id="poem-date"></span>
+            <h1 id="poem-title"></h1>
+        </div>
     </div>
 
     <main class="container">
         <article class="poem-container">
-            <div id="poem-content" class="poem-body">
-                </div>
-            
-            <div style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-                <a href="archive.html" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem;">← RETURN TO COLLECTION</a>
+            <div id="poem-content" class="poem-body"></div>
+            <div class="poem-footer-nav">
+                <a href="archive.html">← RETURN TO COLLECTION</a>
             </div>
         </article>
     </main>
 
     <footer>
-        Midnight Sift &copy; 2026
+        MIDNIGHT SIFT &copy; 2026
     </footer>
 
     <script src="data.js"></script>
@@ -47,7 +49,6 @@
             if (poem) {
                 document.getElementById("poem-title").innerText = poem.title;
                 document.getElementById("poem-date").innerText = poem.date;
-                // We use innerText to respect line breaks from data.js
                 document.getElementById("poem-content").innerText = poem.content;
                 document.title = `${poem.title} | Midnight Sift`;
             } else {
