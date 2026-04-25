@@ -1,40 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
-    document.body.classList.add("fade-in");
-
     const featuredList = document.getElementById("featured-list");
     const allEl = document.getElementById("all-poems");
     const searchInput = document.getElementById("search");
-    const authorBlurb = document.getElementById("author-blurb");
 
-    // UI: Create Calm Card
     function createCard(p) {
         const el = document.createElement("div");
         el.className = "card";
-        const displayText = p.description || p.content.substring(0, 100).replace(/\n/g, ' ') + '...';
+        const displayText = p.description || p.content.substring(0, 100) + "...";
 
         el.innerHTML = `
-            <span class="card-date">${p.date}</span>
-            <h2 class="card-title">${p.title}</h2>
-            <p class="card-snippet">${displayText}</p>
+            <span style="color: var(--accent); font-size: 0.7rem; font-weight: 700; text-transform: uppercase;">${p.date}</span>
+            <h2 style="margin: 1rem 0; font-size: 1.5rem;">${p.title}</h2>
+            <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.6;">${displayText}</p>
         `;
-        el.onclick = () => {
-            document.body.style.opacity = "0";
-            setTimeout(() => window.location.href = `poem.html?id=${p.id}`, 400);
-        };
+        el.onclick = () => window.location.href = `poem.html?id=${p.id}`;
         return el;
     }
 
-    // Load Author
-    if (authorBlurb && typeof author !== 'undefined') {
-        authorBlurb.textContent = author.blurb;
-    }
-
-    // Load Carousel (Home)
     if (featuredList) {
         poems.filter(p => p.featured).forEach(p => featuredList.appendChild(createCard(p)));
     }
 
-    // Load Archive (Grid)
     if (allEl) {
         const render = (list) => {
             allEl.innerHTML = "";
