@@ -150,7 +150,6 @@ header {
     position: relative;
     width: 100%;
     background-color: #0d1117; 
-    background-image: url('hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
