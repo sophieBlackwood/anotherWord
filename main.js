@@ -4,8 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const allEl = document.getElementById("all-poems");
     const searchInput = document.getElementById("search");
     const authorBlurb = document.getElementById("author-blurb");
+    const mainHero = document.querySelector('.fullscreen-hero');
 
     // 2. BACKGROUND LOGIC
+    // Index page gets hero.jpg, Poem pages get hero2-19
     const poemImages = [
         'hero2.jpg', 'hero3.jpg', 'hero4.jpg', 'hero5.jpg', 'hero6.jpg',
         'hero7.jpg', 'hero8.jpg', 'hero9.jpg', 'hero10.jpg', 'hero11.jpg',
@@ -13,12 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
         'hero17.jpg', 'hero18.jpg', 'hero19.jpg'
     ];
 
-    const fullHero = document.querySelector('.fullscreen-hero');
     const poemHero = document.querySelector('.poem-hero-visual');
 
-    if (fullHero) {
+    if (mainHero) {
         // Main Page: Always hero.jpg
-        fullHero.style.backgroundImage = "url('./hero.jpg')";
+        mainHero.style.backgroundImage = "url('./hero.jpg')";
     } else if (poemHero) {
         // Poem Page: Randomly pick hero2 through hero19
         const randomImg = poemImages[Math.floor(Math.random() * poemImages.length)];
@@ -36,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <h2>${p.title}</h2>
             <p>${displayText}</p>
         `;
+        // Navigate using explicit relative path
         el.onclick = () => { window.location.href = `./poem.html?id=${p.id}`; };
         return el;
     }
@@ -49,26 +51,40 @@ document.addEventListener("DOMContentLoaded", () => {
         authorBlurb.textContent = author.blurb;
     }
 
-    // 5. ARCHIVE PAGE CONTENT
+    // 5. ARCHIVE PAGE CONTENT (Sorting & Filtering)
     if (allEl && typeof poems !== 'undefined') {
         let currentSort = 'newest';
+        
         const render = () => {
             const query = searchInput ? searchInput.value.toLowerCase() : "";
+            
+            // Filter by search
             let list = poems.filter(p => 
                 p.title.toLowerCase().includes(query) || 
                 (p.tags && p.tags.some(t => t.toLowerCase().includes(query)))
             );
 
-            if (currentSort === 'newest') list.sort((a, b) => new Date(b.date) - new Date(a.date));
-            if (currentSort === 'oldest') list.sort((a, b) => new Date(a.date) - new Date(b.date));
-            if (currentSort === 'az') list.sort((a, b) => a.title.localeCompare(b.title));
-            if (currentSort === 'za') list.sort((a, b) => b.title.localeCompare(a.title));
+            // Apply Sort
+            if (currentSort === 'newest') {
+                list.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+            } else if (currentSort === 'oldest') {
+                list.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+            } else if (currentSort === 'az') {
+                list.sort((a, b) => a.title.localeCompare(b.title));
+            } else if (currentSort === 'za') {
+                list.sort((a, b) => b.title.localeCompare(a.title));
+            }
 
+            // Clear and Render
             allEl.innerHTML = "";
             list.forEach(p => allEl.appendChild(createCard(p)));
         };
 
-        if (searchInput) searchInput.addEventListener("input", render);
+        // Event Listeners
+        if (searchInput) {
+            searchInput.addEventListener("input", render);
+        }
+
         document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -77,6 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 render();
             });
         });
+
+        // Initial render of archive
         render();
     }
 });
