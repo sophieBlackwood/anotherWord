@@ -43,26 +43,33 @@
     </main>
 
     <script src="data.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // 1. RANDOM BACKGROUND LOGIC
-            const images = ['hero.jpg', 'hero2.jpg', 'hero3.jpg', 'hero4.jpg'];
-            const hero = document.getElementById('poem-hero');
-            if (hero) {
-                const randomImg = images[Math.floor(Math.random() * images.length)];
-                hero.style.backgroundImage = `url('${randomImg}')`;
-            }
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1. RANDOM BACKGROUND LOGIC (Excludes hero.jpg)
+        const poemImages = [
+            'hero2.jpg', 'hero3.jpg', 'hero4.jpg', 'hero5.jpg', 'hero6.jpg',
+            'hero7.jpg', 'hero8.jpg', 'hero9.jpg', 'hero10.jpg', 'hero11.jpg',
+            'hero12.jpg', 'hero13.jpg', 'hero14.jpg', 'hero15.jpg', 'hero16.jpg',
+            'hero17.jpg', 'hero18.jpg', 'hero19.jpg'
+        ];
+        
+        const hero = document.getElementById('poem-hero');
+        if (hero) {
+            const randomImg = poemImages[Math.floor(Math.random() * poemImages.length)];
+            hero.style.backgroundImage = `url('./${randomImg}')`;
+        }
 
-            // 2. POEM LOADING LOGIC
-            const params = new URLSearchParams(window.location.search);
-            const id = params.get("id");
-            
-            // If no ID is present, we just stop. No redirect = no loop.
-            if (!id) {
-                console.log("No poem selected.");
-                return;
-            }
+        // 2. POEM LOADING LOGIC
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        
+        // Critical: If no ID, stop. Do not redirect to index.html.
+        if (!id) {
+            console.log("No poem selected.");
+            return;
+        }
 
+        if (typeof poems !== 'undefined') {
             const poem = poems.find(p => p.id == id);
             if (poem) {
                 document.getElementById("poem-title").innerText = poem.title;
@@ -70,10 +77,11 @@
                 document.getElementById("poem-content").innerText = poem.content;
                 document.title = `${poem.title} | Midnight Sift`;
             } else {
-                // If ID is wrong, show a friendly message instead of reloading
-                document.getElementById("poem-content").innerHTML = "Poem not found. <a href='archive.html' style='color:var(--accent)'>Return to Archive</a>";
+                document.getElementById("poem-content").innerHTML = 
+                    "Poem not found. <a href='./archive.html' style='color:var(--accent)'>Return to Archive</a>";
             }
-        });
-    </script>
+        }
+    });
+</script>
 </body>
 </html>
