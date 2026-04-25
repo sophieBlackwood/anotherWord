@@ -32,7 +32,7 @@ const backgroundImages = [
 
 // 2. Function to pick one at random
 function setRandomHero() {
-    const heroSection = document.querySelector('.fullscreen-hero') || document.querySelector('.poem-hero-visual');
+    const heroSection = document.querySelector('.poem-hero-visual');
     
     if (heroSection) {
         const randomIndex = Math.floor(Math.random() * backgroundImages.length);
