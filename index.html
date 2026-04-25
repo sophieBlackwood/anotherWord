@@ -3,47 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Another Word | Home</title>
+    <title>Midnight Sift | Dallin Stahmann</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="fade-in">
+<body>
     <header>
-    <nav class="navbar">
-        <div class="logo"><a href="index.html">Another Word</a></div>
-        <ul class="nav-links">
-            <li><a href="poems.html">Home</a></li>
-            <li><a href="poems.html">Poems</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="fullscreen-hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>Before we ever write a poem,<br>we must first survive it.</h1>
-    </div>
-</section>
-
-<main class="container">
-    <section class="section-label">Featured Works</section>
-    <div class="grid" id="featured-list" style="margin-bottom: 6rem;"></div>
-
-    <section class="about-author-section">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="profile.jpg" alt="Author Portrait">
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+                <a href="index.html">Midnight <span>Sift</span></a>
             </div>
-            <div class="about-text">
-                <span class="section-label" style="margin-bottom: 1rem; display: block;">About the Author</span>
-                <p id="author-blurb"></p>
-            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="archive.html">Archive</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="fullscreen-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Fragments of time, <br>smoothed by silence.</h1>
         </div>
     </section>
-</main>
+
+    <main class="container">
+        <section class="section-label">Featured Works</section>
+        <div class="carousel-container">
+            <div class="carousel-track" id="featured-list">
+                </div>
+        </div>
+
+        <section class="about-author-section">
+            <div class="about-container">
+                <div class="about-image">
+                    <img src="profile.jpg" alt="Dallin Stahmann">
+                </div>
+                <div class="about-text">
+                    <span class="section-label" style="text-align: left; margin-bottom: 1rem;">The Author</span>
+                    <p id="author-blurb"></p>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Another Word.</p>
+        <div class="footer-brand">Midnight Sift</div>
+        <div class="footer-credits">&copy; 2026 Dallin Stahmann</div>
     </footer>
 
     <script src="data.js"></script>
