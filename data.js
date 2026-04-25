@@ -1,6 +1,6 @@
 const author = {
   name: "Dallin Stahmann",
-  blurb: "Dallin is a writer with a gift for capturing the world's complexities in verse. Based in Idaho, he has spent years accumulating a collection of poems that reflect true, genuine emotions. This sanctuary is a place for him to share those quiet observations with others.",
+  blurb: "Dallin began writing poems a few years ago as a way of understanding the world. Since then, he has learned and grown and discovered a gift for words and for expressing difficult emotions through poems. This website serves as his way of sharing these poems with others who may benefit from them.",
   location: "Idaho"
 };
 
