@@ -18,19 +18,24 @@
     </header>
 
     <div class="poem-hero">
-        <span id="poem-date" class="card-date"></span>
-        <h1 id="poem-title" style="font-size: 3rem; margin-top: 1rem;"></h1>
+        <span id="poem-date" style="color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;"></span>
+        <h1 id="poem-title" style="font-size: 3.5rem; margin-top: 1rem;"></h1>
     </div>
 
     <main class="container">
         <article class="poem-container">
-            <div id="poem-content" class="poem-body"></div>
+            <div id="poem-content" class="poem-body">
+                </div>
             
-            <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-                <a href="archive.html" style="color: var(--accent); text-decoration: none; font-weight: 600;">← Back to Collection</a>
+            <div style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                <a href="archive.html" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.9rem;">← RETURN TO COLLECTION</a>
             </div>
         </article>
     </main>
+
+    <footer>
+        Midnight Sift &copy; 2026
+    </footer>
 
     <script src="data.js"></script>
     <script>
@@ -40,9 +45,13 @@
             const poem = poems.find(p => p.id == id);
 
             if (poem) {
-                document.getElementById("poem-title").textContent = poem.title;
-                document.getElementById("poem-date").textContent = poem.date;
-                document.getElementById("poem-content").innerHTML = poem.content.replace(/\n/g, '<br>');
+                document.getElementById("poem-title").innerText = poem.title;
+                document.getElementById("poem-date").innerText = poem.date;
+                // We use innerText to respect line breaks from data.js
+                document.getElementById("poem-content").innerText = poem.content;
+                document.title = `${poem.title} | Midnight Sift`;
+            } else {
+                window.location.href = "archive.html";
             }
         });
     </script>
