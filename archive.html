@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archive | Midnight Sift</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+                <a href="index.html">Midnight <span>Sift</span></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="archive.html" class="active">Archive</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="section-label">Full Archive</section>
+        
+        <div class="search-wrapper">
+            <input type="text" id="search" class="search" placeholder="Search by title, emotion, or keyword..." autocomplete="off">
+        </div>
+
+        <div id="all-poems" class="grid">
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer-brand">Midnight Sift</div>
+        <div class="footer-credits">&copy; 2026 Dallin Stahmann.</div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
