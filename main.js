@@ -7,8 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2. RANDOM BACKGROUND ROTATION
     // Add your image filenames here
-    const backgroundImages = ['hero.jpg', 'hero2.jpg', 'hero3.jpg', 'hero4.jpg'];
-    
+    // 1. Define your images (ensure these files exist in your folder!)
+const backgroundImages = [
+    'hero.jpg',
+    'hero2.jpg',
+    'hero3.jpg',
+    'hero4.jpg'
+];
+
+// 2. Function to pick one at random
+function setRandomHero() {
     const heroSection = document.querySelector('.fullscreen-hero') || document.querySelector('.poem-hero-visual');
     
     if (heroSection) {
@@ -16,6 +24,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const selectedImage = backgroundImages[randomIndex];
         heroSection.style.backgroundImage = `url('${selectedImage}')`;
     }
+}
+
+// 3. Call it immediately
+setRandomHero();
 
     // 3. CARD GENERATOR FUNCTION
     function createCard(p) {
