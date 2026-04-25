@@ -1,14 +1,15 @@
 const author = {
   name: "Dallin Stahmann",
-  blurb: "Dallin is an amazing person with a gift for words. He finds himself expressing the world around him through poetry. Throughout the years he has done this, he has accumulated many poems, and the emotions expressed in each are true and genuine. This is a place for him to share his words with others.",
+  blurb: "Dallin is a writer with a gift for capturing the world's complexities in verse. Based in Idaho, he has spent years accumulating a collection of poems that reflect true, genuine emotions. This sanctuary is a place for him to share those quiet observations with others.",
   location: "Idaho"
 };
 
 const poems = [
   {
     id: 1,
-    title: "Cycle of life",
+    title: "Cycle of Life",
     date: "12/14/24",
+    description: "Story Behind Poem",
     content: `When you look at the world, what do you see?
 This is what the world looks like to me:
 I see trials and pain
@@ -58,16 +59,16 @@ Till death do I end
 And still start again
 A cycle of life
 Though full of strife
-Will always be blessed to me.”
-`,
-    tags: ["Cycle of Life", "Cycle", "life"],
+Will always be blessed to me.`,
+    tags: ["Cycle of Life", "Cycle", "life", "hope", "existence"],
     featured: true
   },
   {
     id: 2,
     title: "Shout into Nothing",
     date: "2/3/25",
-    content: `“It’s a shout into nothing
+    description: "Story Behind Poem",
+    content: `It’s a shout into nothing
 To let out the grief and frustration and pain 
 A plea to finally be something 
 A silent cry in the rain
@@ -96,16 +97,16 @@ Is the reason that something
 Finally feels ok
 
 My shout into nothing
-Is what keeps me here today”
-`,
-    tags: ["shout", "nothing", "Shout Into Nothing"],
+Is what keeps me here today`,
+    tags: ["shout", "nothing", "Shout Into Nothing", "grief", "healing"],
     featured: true
   },
-   {
+  {
     id: 3,
     title: "Full System Error",
     date: "2/10/25",
-    content: `“Brain is shutting down, senses are wrong 
+    description: "Story Behind Poem",
+    content: `Brain is shutting down, senses are wrong 
 World is changing, what is going on?
 Why can’t I think, why am I not strong
 I just feel like saying, “I just need a pause”
@@ -122,14 +123,11 @@ But nothings going on
 
 I’m still breathing but no words escaping, 
 I’m just staying. 
-In a broken system that’s flawed”
-`,
-    tags: ["full", "system", "Full System Error", "error"],
+In a broken system that’s flawed`,
+    tags: ["full", "system", "Full System Error", "error", "overwhelmed", "stasis"],
     featured: true
-  },
-  // More
-   
+  }
 ];
 
-// If you need to filter these for the "Featured" carousel on the home page:
+// Helper for the homepage logic
 const featuredPoems = poems.filter(p => p.featured);
