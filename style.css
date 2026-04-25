@@ -53,6 +53,59 @@ header {
     letter-spacing: 4px; 
     text-transform: uppercase; 
 }
+/* --- THE ICON LOGO --- */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Spacing between icon and text */
+}
+
+.logo-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Space between lines */
+}
+
+.logo-icon span {
+    display: block;
+    height: 1px;
+    background: var(--accent);
+    transition: all 0.4s ease;
+}
+
+.line-1 { width: 20px; }
+.line-2 { width: 14px; opacity: 0.6; }
+.line-3 { width: 6px; opacity: 0.3; }
+
+/* Subtle animation when hovering over the logo area */
+.logo:hover .line-1 { width: 24px; }
+.logo:hover .line-2 { width: 18px; opacity: 1; }
+.logo:hover .line-3 { width: 12px; opacity: 0.6; }
+
+/* --- FEATURED WORKS LABEL --- */
+.section-label { 
+    display: block; 
+    text-transform: uppercase; 
+    font-size: 0.7rem; 
+    letter-spacing: 6px; /* Extra spacing for that premium look */
+    color: var(--accent); 
+    margin-bottom: 3.5rem; 
+    text-align: center; 
+    font-weight: 600;
+    opacity: 0.9;
+    position: relative;
+}
+
+/* Subtle decorative line under the "Featured Works" label */
+.section-label::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--accent);
+    margin: 15px auto 0;
+    opacity: 0.4;
+}
 
 .logo span { color: var(--accent); }
 
