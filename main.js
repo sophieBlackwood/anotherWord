@@ -6,43 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const authorBlurb = document.getElementById("author-blurb");
 
     // 2. RANDOM BACKGROUND ROTATION
-    // Add your image filenames here
-    // 1. Define your images (ensure these files exist in your folder!)
-const backgroundImages = [
-    'hero.jpg',
-    'hero2.jpg',
-    'hero3.jpg',
-    'hero4.jpg',
-    'hero5.jpg',
-    'hero6.jpg',
-    'hero7.jpg',
-    'hero8.jpg',
-    'hero9.jpg',
-    'hero10.jpg',
-    'hero11.jpg',
-    'hero12.jpg',
-    'hero13.jpg',
-    'hero14.jpg',
-    'hero15.jpg',
-    'hero16.jpg',
-    'hero17.jpg',
-    'hero18.jpg',
-    'hero19.jpg'
-];
+    const backgroundImages = [
+        'hero.jpg', 'hero2.jpg', 'hero3.jpg', 'hero4.jpg', 'hero5.jpg',
+        'hero6.jpg', 'hero7.jpg', 'hero8.jpg', 'hero9.jpg', 'hero10.jpg',
+        'hero11.jpg', 'hero12.jpg', 'hero13.jpg', 'hero14.jpg', 'hero15.jpg',
+        'hero16.jpg', 'hero17.jpg', 'hero18.jpg', 'hero19.jpg'
+    ];
 
-// 2. Function to pick one at random
-function setRandomHero() {
-    const heroSection = document.querySelector('.poem-hero-visual');
-    
-    if (heroSection) {
-        const randomIndex = Math.floor(Math.random() * backgroundImages.length);
-        const selectedImage = backgroundImages[randomIndex];
-        heroSection.style.backgroundImage = `url('${selectedImage}')`;
+    function setRandomHero() {
+        // Look for either the home hero or the poem hero
+        const heroSection = document.querySelector('.fullscreen-hero') || document.querySelector('.poem-hero-visual');
+        
+        if (heroSection) {
+            const randomIndex = Math.floor(Math.random() * backgroundImages.length);
+            const selectedImage = backgroundImages[randomIndex];
+            heroSection.style.backgroundImage = `url('./${selectedImage}')`;
+        }
     }
-}
 
-// 3. Call it immediately
-setRandomHero();
+    setRandomHero();
 
     // 3. CARD GENERATOR FUNCTION
     function createCard(p) {
@@ -55,12 +37,13 @@ setRandomHero();
             <h2>${p.title}</h2>
             <p>${displayText}</p>
         `;
-        el.onclick = () => window.location.href = `poem.html?id=${p.id}`;
+        // Explicitly using ./ to tell the browser "same folder"
+        el.onclick = () => window.location.href = `./poem.html?id=${p.id}`;
         return el;
     }
 
     // 4. HOME PAGE LOGIC
-    if (featuredList) {
+    if (featuredList && typeof poems !== 'undefined') {
         poems.filter(p => p.featured).forEach(p => featuredList.appendChild(createCard(p)));
     }
 
@@ -68,20 +51,18 @@ setRandomHero();
         authorBlurb.textContent = author.blurb;
     }
 
-    // 5. ARCHIVE PAGE LOGIC (Sorting & Filtering)
-    if (allEl) {
+    // 5. ARCHIVE PAGE LOGIC
+    if (allEl && typeof poems !== 'undefined') {
         let currentSort = 'newest';
 
         const render = () => {
             const query = searchInput ? searchInput.value.toLowerCase() : "";
             
-            // Filter
             let filteredList = poems.filter(p => 
                 p.title.toLowerCase().includes(query) || 
                 (p.tags && p.tags.some(t => t.toLowerCase().includes(query)))
             );
 
-            // Sort
             if (currentSort === 'newest') {
                 filteredList.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
             } else if (currentSort === 'oldest') {
@@ -92,12 +73,10 @@ setRandomHero();
                 filteredList.sort((a, b) => b.title.localeCompare(a.title));
             }
 
-            // Clear and Render
             allEl.innerHTML = "";
             filteredList.forEach(p => allEl.appendChild(createCard(p)));
         };
 
-        // Listeners
         if (searchInput) {
             searchInput.addEventListener("input", render);
         }
@@ -111,7 +90,6 @@ setRandomHero();
             });
         });
 
-        // Initial Run for Archive
         render();
     }
 });
