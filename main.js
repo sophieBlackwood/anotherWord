@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     function setRandomHero() {
-        // Look for either the home hero or the poem hero
-        const heroSection = document.querySelector('.fullscreen-hero') || document.querySelector('.poem-hero-visual');
+    
+        const heroSection = document.querySelector('.poem-hero-visual');
         
         if (heroSection) {
             const randomIndex = Math.floor(Math.random() * backgroundImages.length);
