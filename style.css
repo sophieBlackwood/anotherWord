@@ -151,6 +151,19 @@ header {
     width: 100%;
     background-color: #0d1117; 
     background-repeat: no-repeat;
+    background-image: url('hero.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.poem-hero-visual {
+    position: relative;
+    width: 100%;
+    background-color: #0d1117; 
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
