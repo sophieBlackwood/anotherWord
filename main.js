@@ -10,15 +10,17 @@ function goToPoem(id) {
     }, 400);
 }
 
-// ---------- UI COMPONENT: CARD ----------
 function createCard(p) {
     const el = document.createElement("div");
     el.className = "card";
     
+    // Fallback to snippet if description is missing
+    const displayText = p.description || (p.content.substring(0, 100).replace(/\n/g, ' ') + '...');
+
     el.innerHTML = `
-        <span class="card-date">${p.date || 'Recent'}</span>
-        <h3 class="card-title">${p.title}</h3>
-        <p class="card-snippet">${p.content.substring(0, 100).replace(/\n/g, ' ')}...</p>
+        <span class="card-date">${p.date}</span>
+        <h2 class="card-title">${p.title}</h2>
+        <p class="card-snippet">${displayText}</p>
     `;
     
     el.onclick = () => goToPoem(p.id);
