@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poem | Midnight Sift</title>
     <link rel="stylesheet" href="style.css">
-     <link rel="icon" type="image/x-icon" href="logo.png?v=2"/>
+    <link rel="icon" type="image/png" href="logo.png?v=3"/>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-    <div class="logo-icon">
-        <span class="line-1"></span>
-        <span class="line-2"></span>
-        <span class="line-3"></span>
-    </div>
-    <a href="index.html">Midnight <span>Sift</span></a>
-</div>
+                <div class="logo-icon">
+                    <span class="line-1"></span>
+                    <span class="line-2"></span>
+                    <span class="line-3"></span>
+                </div>
+                <a href="index.html">Midnight <span>Sift</span></a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="archive.html">Archive</a></li>
@@ -25,7 +25,7 @@
         </nav>
     </header>
 
-    <div class="poem-hero-visual">
+    <div class="poem-hero-visual" id="poem-hero">
         <div class="poem-hero-overlay"></div>
         <div class="poem-hero-content">
             <span id="poem-date" style="color:var(--accent); font-weight:600; text-transform:uppercase; letter-spacing:2px;"></span>
@@ -36,8 +36,8 @@
     <main class="container">
         <article class="poem-container">
             <div id="poem-content" class="poem-body"></div>
-            <div style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-                <a href="archive.html" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.8rem;">← BACK TO ARCHIVE</a>
+            <div class="poem-footer-nav" style="margin-top: 5rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+                <a href="archive.html" style="color: var(--accent); text-decoration: none; font-weight: 600; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">← BACK TO ARCHIVE</a>
             </div>
         </article>
     </main>
@@ -45,8 +45,24 @@
     <script src="data.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // 1. RANDOM BACKGROUND LOGIC
+            const images = ['hero.jpg', 'hero2.jpg', 'hero3.jpg', 'hero4.jpg'];
+            const hero = document.getElementById('poem-hero');
+            if (hero) {
+                const randomImg = images[Math.floor(Math.random() * images.length)];
+                hero.style.backgroundImage = `url('${randomImg}')`;
+            }
+
+            // 2. POEM LOADING LOGIC
             const params = new URLSearchParams(window.location.search);
             const id = params.get("id");
+            
+            // If no ID is present, we just stop. No redirect = no loop.
+            if (!id) {
+                console.log("No poem selected.");
+                return;
+            }
+
             const poem = poems.find(p => p.id == id);
             if (poem) {
                 document.getElementById("poem-title").innerText = poem.title;
@@ -54,7 +70,8 @@
                 document.getElementById("poem-content").innerText = poem.content;
                 document.title = `${poem.title} | Midnight Sift`;
             } else {
-                window.location.href = "archive.html";
+                // If ID is wrong, show a friendly message instead of reloading
+                document.getElementById("poem-content").innerHTML = "Poem not found. <a href='archive.html' style='color:var(--accent)'>Return to Archive</a>";
             }
         });
     </script>
