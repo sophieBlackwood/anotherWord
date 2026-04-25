@@ -12,7 +12,22 @@ const backgroundImages = [
     'hero.jpg',
     'hero2.jpg',
     'hero3.jpg',
-    'hero4.jpg'
+    'hero4.jpg',
+    'hero5.jpg',
+    'hero6.jpg',
+    'hero7.jpg',
+    'hero8.jpg',
+    'hero9.jpg',
+    'hero10.jpg',
+    'hero11.jpg',
+    'hero12.jpg',
+    'hero13.jpg',
+    'hero14.jpg',
+    'hero15.jpg',
+    'hero16.jpg',
+    'hero17.jpg',
+    'hero18.jpg',
+    'hero19.jpg'
 ];
 
 // 2. Function to pick one at random
