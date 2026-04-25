@@ -1,6 +1,6 @@
 const author = {
   name: "Dallin Stahmann",
-  blurb: "Blurb blurb blurb blurb",
+  blurb: "Dallin is an amazing person with a gift for words. He finds himself expressing the world around him through poetry. Throughout the years he has done this, he has accumulated many poems, and the emotions expressed in each are true and genuine. This is a place for him to share his words with others.",
   location: "Idaho"
 };
 
