@@ -350,7 +350,6 @@ header {
     height: 320px; 
     object-fit: cover; 
     border-radius: 4px; 
-    opacity: 0.8;
 }
 
 .about-text { 
