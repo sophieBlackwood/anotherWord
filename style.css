@@ -258,30 +258,116 @@ header {
     line-height: 1.7; 
 }
 
-/* --- CAROUSEL (HOME PAGE) --- */fc
-.carousel-container { 
-    width: 100%; 
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    scrollbar-width: none; 
-    padding: 2rem 0; 
+/* --- Blog Carousel Section --- */
+.blog-section {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  overflow: hidden; /* Critical to hide the cards off-screen */
 }
 
-.carousel-container::-webkit-scrollbar { 
+.blog-carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.blog-card-grid {
+  display: flex;
+  gap: 2rem;
+  will-change: transform;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smoother slide */
+}
+
+/* --- The Cards --- */
+.blog-card {
+  flex: 0 0 320px; /* Base width for desktop */
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card-inner {
+  width: 100%;
+  background: var(--card-bg, #1e1e1e); /* Fallback to dark if var is missing */
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* --- Navigation Buttons --- */
+.blog-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--accent, #7FD0C2);
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+  padding: 0 10px;
+}
+
+.blog-carousel-btn.prev { left: -50px; }
+.blog-carousel-btn.next { right: -50px; }
+
+.blog-carousel-btn:hover {
+  transform: translateY(-50%) scale(1.2);
+  color: #ffffff;
+}
+
+/* --- Responsive Styles (The Fix) --- */
+
+/* For Tablets (Screens under 1024px) */
+@media (max-width: 1024px) {
+  .blog-carousel {
+    max-width: 90%;
+  }
+  .blog-carousel-btn.prev { left: -30px; }
+  .blog-carousel-btn.next { right: -30px; }
+}
+
+/* For Phones (Screens under 768px) */
+@media (max-width: 768px) {
+  .blog-card {
+    flex: 0 0 85vw; /* Each card takes up 85% of the screen width */
+  }
+  
+  .blog-carousel-btn {
+    display: none; /* Hide buttons on mobile; users prefer swiping */
+  }
+  
+  .blog-carousel-track-container {
+    overflow-x: auto; /* Allow natural finger-swiping on mobile */
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+  }
+  
+  .blog-card {
+    scroll-snap-align: center;
+  }
+
+  /* Hide scrollbar for a cleaner mobile look */
+  .blog-carousel-track-container::-webkit-scrollbar {
     display: none;
+  }
 }
-
-.carousel-track { 
-    display: flex; 
-    gap: 2rem; 
-    padding: 0 8%; 
-}
-
-.carousel-track .card { 
-    flex: 0 0 380px; 
-    scroll-snap-align: center; 
-}
-
 /* --- SEARCH BAR --- */
 .search-wrapper { 
     max-width: 650px; 
