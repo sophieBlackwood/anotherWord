@@ -127,7 +127,7 @@ In a broken system that’s flawed`,
     tags: ["full", "system", "Full System Error", "error", "overwhelmed", "stasis"],
     featured: false
   },
-  // More
+  // More -- NOT DALLIN STANDARDIZED
   {
     id: 4,
     title: "Contradiction",
@@ -382,8 +382,7 @@ And it’s the joy shared with others
 Thank you to my light
 That never will have a rift
 And thank you for the path
-This whole thing is a gift
-    `,
+This whole thing is a gift`,
     tags: ["Foggy Path", "foggy", "growth", "journey"],
     featured: false
   },
@@ -417,8 +416,7 @@ I still don’t know
 Should I just go
 Stop please
 Listen and breathe
-Why did nobody see me
-    `,
+Why did nobody see me`,
     tags: ["Frozen in Time", "frozen", "sadness"],
     featured: true
   },
@@ -453,12 +451,10 @@ Honest and open, I hope you know that it’s true
 Honest and open, I say it once again 
 Honest and open, I hope this friendship never ends 
 Honest and open, even if we never see 
-Honest and open, I still have you with me
-    `,
+Honest and open, I still have you with me`,
     tags: ["Honest and Open", "friendship", "honest"],
     featured: true
   },
-
    {
     id: 12,
     title: "Is It?",
@@ -527,8 +523,7 @@ To have things come to an end
 Is it the cause
 Of time always ticking
 Is it the effect
-Of a life worth living
-    `,
+Of a life worth living`,
     tags: ["Is it", "questioning", "life"],
     featured: false
   },
@@ -569,8 +564,7 @@ I’ll keep you safe by my side
 And hope our luck can turn the tide
 
 It’s nothing truly like a war
-But it’s not the same as it was before
-    `,
+But it’s not the same as it was before`,
     tags: ["luck", "fate", "change"],
     featured: false
   },
@@ -618,8 +612,7 @@ The best part of the sound
 But I might do more
 Go farther than I can imagine
 Mistakes are a chore
-But maybe the best that can happen
-    `,
+But maybe the best that can happen`,
     tags: ["mistake", "growth", "change"],
     featured: false
   },
@@ -672,8 +665,7 @@ Something stronger and it’s a gift from heaven
 How
 Is a question that doesn’t need to be asked
 Because
-Of a blessing and these things that will last
-    `,
+Of a blessing and these things that will last`,
     tags: ["question", "moments in memory", "memory", "moment", "blessing"],
     featured: false
   },
@@ -716,8 +708,7 @@ Who are the ones who helped me see
 Thank you to those people
 For the symbols I hold dear
 And thank you to the reader
-For letting me be here
-    `,
+For letting me be here`,
     tags: ["symbol", "friendship", "memory", "friend"],
     featured: true
   },
@@ -841,8 +832,7 @@ And be the one who shares
 I can’t keep this going
 an act that went too fast
 My thread just snapped the needle
-and I’ve come apart at last
-    `,
+and I’ve come apart at last`,
     tags: ["unravel", "fall apart", "numb", "change"],
     featured: false
   },
@@ -890,8 +880,7 @@ Who do I wish it for
 Is it good to wish for someone
 Is it selfish if it’s not
 Or is it good to be honest
-And be happy with what I got
-    `,
+And be happy with what I got`,
     tags: ["wish", "hope", "change", "answers"],
     featured: false
   }
