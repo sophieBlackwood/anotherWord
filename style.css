@@ -258,7 +258,7 @@ header {
     line-height: 1.7; 
 }
 
-/* --- CAROUSEL (HOME PAGE) --- */
+/* --- CAROUSEL (HOME PAGE) --- */fc
 .carousel-container { 
     width: 100%; 
     overflow-x: auto; 
@@ -391,8 +391,8 @@ header {
 }
 
 .about-image img { 
-    width: 400px; 
-    height: 500px; 
+    width: 350px; 
+    height: 450px; 
     object-fit: cover; 
     border-radius: 4px; 
 }
