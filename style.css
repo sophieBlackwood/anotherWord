@@ -493,8 +493,8 @@ header {
     color: var(--muted);
     font-weight: 300;
     margin-top: 1.5rem;
-    margin-left: 1.5 rem;
-    margin-right: 1.5 rem;
+    margin-left: clamp(0.75rem, 4vw, 1.5rem);
+    margin-right: clamp(0.75rem, 4vw, 1.5rem);
 }
 
 /* --- FOOTER --- */
