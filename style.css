@@ -332,7 +332,7 @@ header {
   color: #ffffff;
 }
 
-/* --- Responsive Styles (The Fix) --- */
+/* --- Responsive Styles --- */
 
 /* For Tablets (Screens under 1024px) */
 @media (max-width: 1024px) {
@@ -346,15 +346,15 @@ header {
 /* For Phones (Screens under 768px) */
 @media (max-width: 768px) {
   .blog-card {
-    flex: 0 0 85vw; /* Each card takes up 85% of the screen width */
+    flex: 0 0 85vw; 
   }
   
   .blog-carousel-btn {
-    display: none; /* Hide buttons on mobile; users prefer swiping */
+    display: none; 
   }
   
   .blog-carousel-track-container {
-    overflow-x: auto; /* Allow natural finger-swiping on mobile */
+    overflow-x: auto; 
     scroll-snap-type: x mandatory;
     padding-bottom: 1rem;
   }
@@ -363,11 +363,11 @@ header {
     scroll-snap-align: center;
   }
 
-  /* Hide scrollbar for a cleaner mobile look */
   .blog-carousel-track-container::-webkit-scrollbar {
     display: none;
   }
 }
+
 /* --- SEARCH BAR --- */
 .search-wrapper { 
     max-width: 650px; 
@@ -493,6 +493,8 @@ header {
     color: var(--muted);
     font-weight: 300;
     margin-top: 1.5rem;
+    margin-left: 1.5 rem;
+    margin-right: 1.5 rem;
 }
 
 /* --- FOOTER --- */
