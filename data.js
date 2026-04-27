@@ -330,7 +330,7 @@ For the joy the flowers bring me can never truly be wrong
 One day I’ll have my flowers though I know it won't be fast
 But I’ll never leave these flowers forgotten in the past
     `,
-    tags: ["flowers", "growth" "flowers all around", "change"],
+    tags: ["flowers", "growth", "flowers all around", "change"],
     featured: false
   },
 
