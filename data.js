@@ -237,7 +237,7 @@ And for the person it frames
    {
     id: 7,
     title: "Flaw",
-    date: "1/1/01",
+    date: "6/27/25",
     description: "Story Behind Poem",
     content: `I know of one certain law
 That every single thing has a flaw
