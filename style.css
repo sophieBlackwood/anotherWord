@@ -393,7 +393,7 @@ header {
 .about-image img { 
     width: 450px; 
     height: 600px; 
-    object-fit: cover;  /* Cover */
+    object-fit: cover; 
     border-radius: 4px; 
 }
 
