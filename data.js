@@ -894,8 +894,8 @@ And be happy with what I got
     `,
     tags: ["wish", "hope", "change", "answers"],
     featured: false
-  },
-  
+  }
+
 ];
 
 // Helper for the homepage logic
