@@ -883,7 +883,40 @@ Or is it good to be honest
 And be happy with what I got`,
     tags: ["wish", "hope", "change", "answers"],
     featured: false
-  }
+  },
+
+  {
+    id: 21,
+    title: "Bittersweet",
+    date: "7/14/25",
+    description: "Story Behind Poem",
+    content: `Nostalgia is a beautiful liar
+    It's a promise of the past that can't be recaptured
+    An exact picture that is always different
+    And I can't tell if it's enough the way it is
+    
+    Nothing is wrong now or then
+    But seeing how it was makes now seem skewed
+    Impossible to be happy but no reason to be sad
+    The memories are a joy and a pain
+    
+    An experience that can't be replicated
+    A time stuck in the past
+    A taste no longer there
+    A sound that warms and chills
+    
+    Getting stuck in limbo of how I feel
+    No way to know how else things could've turned out
+    Accepting the fact but still wondering regardless
+    And preventing further progress
+    
+    It feels like a gentle love in many ways
+    And it stings being without it
+    The bittersweet emotion
+    That is and isn't mine`,
+    tags: ["Bittersweet", "emotion", "change" ],
+    featured: false
+  },
 
 ];
 
