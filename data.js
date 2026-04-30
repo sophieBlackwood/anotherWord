@@ -9,7 +9,7 @@ const poems = [
     id: 1,
     title: "Cycle of Life",
     date: "12/14/24",
-    description: "Story Behind Poem",
+    description: "The first poem that was made by Dallin was written after reflecting on his own experiences and those he shared with others. This helped him realize how the difficulty and hardships, though unpleasant, made the sweet moments in life better and allowed him to have an appreciation for those moments and those yet to come.",
     content: `When you look at the world, what do you see?
 This is what the world looks like to me:
 I see trials and pain
@@ -286,7 +286,7 @@ And remember the lesson to be who you are
     id: 8,
     title: "Flowers all around",
     date: "4/2/25",
-    description: "Story Behind Poem",
+    description: "The image and idea of flowers are used in many different ways in this poem representing love, friendship, connection, and beauty, as well as the mixture of emotions that these themes hold and can bring.",
     content: `I see flowers all around, growing wherever there is room
 Petals soaking in sunshine, beautiful all in bloom
 
@@ -391,7 +391,7 @@ This whole thing is a gift`,
     id: 10,
     title: "Frozen in Time",
     date: "3/28/25",
-    description: "Story Behind Poem",
+    description: "This poem focuses on the feeling of dread after being forgotten and left out, and how time seems to freeze, making it worse. It was written as a way to help process and escape that feeling.",
     content: `Frozen in time
 As people pass by
 My head is whirling
@@ -425,7 +425,7 @@ Why did nobody see me`,
     id: 11,
     title: "Honest and Open",
     date: "4/3/25",
-    description: "Story Behind Poem",
+    description: "Written for a friend as a way of thanks and to appreciate the shared connection they have. This friend was actually the one who first introduced the author (Dallin) to poetry and got him to start writing.",
     content: `Honest and open, is a friendship that is true 
 Honest and open, are words that connect me back to you 
 Honest and open, even on the worst of days 
