@@ -61,7 +61,7 @@ A cycle of life
 Though full of strife
 Will always be blessed to me.`,
     tags: ["Cycle of Life", "Cycle", "life", "hope", "existence"],
-    featured: false
+    featured: true
   },
   {
     id: 2,
