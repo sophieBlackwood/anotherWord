@@ -923,7 +923,7 @@ And be happy with what I got`,
     title: "Lightning",
     date: "7/23/25",
     description: "Story Behind Poem",
-    content: 'I’m wishing I could do things again
+    content: `I’m wishing I could do things again
 To relive the good and to change the bad
 To have things be perfect
 And make them the way they could have
@@ -941,16 +941,15 @@ And leave for tomorrow
 I can’t make lightning strike twice or go back to that time
 So I’m cherrishing the one flash in all brilliance and glory
 And though it’s fading so fast
-That bright light is my story`,
+That bright light is my story`, // Changed to backticks
     tags: ["Lightning", "memories", "story"],
     featured: false
   },
-
-   {
+  {
     id: 23,
     title: "Ebb and Flow",
     date: "9/25/25",
-    description: "This poem reflects on previous thoughts and writings that had been made and the fears and doubts of accepting your own positive messages when in a new situation. The author now looks back at these fears of change and being replaced and knows how natural those concerns are but how those past connections and experiences were still valuable and strong even if in a new situation, allowing for more connections and exyto be made as well as the significance of change in life.",
+    description: "This poem reflects on previous thoughts and writings...",
     content: `Look at time go
 Like an ebb and flow
 So much to do
@@ -977,45 +976,133 @@ Left with no emotion or reason
 I guess that means it was also taken away`,
     tags: ["Ebb and Flow", "change", "loss"],
     featured: false
-  },
+  }
 
    {
     id: 24,
-    title: " ",
-    date: " ",
+    title: "Stars in the Night",
+    date: "8/13/25",
     description: "Story Behind Poem",
-    content: ``,
-    tags: [" "],
-    featured: false
+    content: `Some of the best moments
+Happen late in the night
+When connections are strengthened
+And everything is right
+
+We talked for many hours
+About life and moments and days
+Brought up sore topics
+But didn’t turn the other way
+
+We listened and we realized
+That nothing had to change
+And brought us closer together
+As we grow in exchange
+
+See a shooting star
+Make a wish that we share
+And know that we are happy
+And that we both care
+
+Late night talks are my favorite memories 
+A gentle glowing light
+Irreplaceable sparkling gemstones
+Filled with stars in the night`,
+    tags: ["Stars in the Night", "Night", "memories", "friendship", "happiness"],
+    featured: true
   },
 
    {
     id: 25,
-    title: " ",
-    date: " ",
+    title: "Thought I Knew",
+    date: "9/2/25",
     description: "Story Behind Poem",
-    content: ``,
-    tags: [" "],
+    content: `I thought I knew What to do
+I thought I knew about you
+I thought nothing would have to change
+I thought that we could stay the same
+I thought that I had a plan
+I thought I was a better man
+But I’m not what I thought
+I’m not someone who has a lot
+I’m not someone who changed the world
+Not even someone that you would care
+I’m not sure of almost anything
+I just wanted to share time with you
+But now I feel like a note on a page
+Or something small that’s in the way
+Told to go and move away
+And leave the things that made me sane
+I thought I knew how this worked
+So I’ll just leave here with these words
+Maybe I’ll understand 
+But I thought I knew and it went bad`,
+    tags: ["Thought I knew", "mistake", "loss", "burden"],
     featured: false
   },
 
    {
     id: 26,
-    title: " ",
-    date: " ",
+    title: "Symphony",
+    date: "9/12/25",
     description: "Story Behind Poem",
-    content: ``,
-    tags: [" "],
+    content: `Life goes on at a steady tempo
+In seconds, minutes, hours, days, weeks, months and years
+You know the rhythm doesn’t change
+And yet the song won’t stay the same
+
+In the background the gentle buzz
+And you know how it was
+The song plays on wherever
+And can tie memories and emotions together
+
+A melody for each their own
+With a perfect tone
+A piece being written and created
+That is never deleted or out dated
+
+A song made up of many parts
+That will touch countless hearts
+Even if we don’t fully listen
+There it will still softly glisten
+
+Even as the curtains fall
+And no more voices call
+Despite all the strife
+That’s what make up the symphony of a life`,
+    tags: ["symphony", "beauty", "melody", "change"],
     featured: false
   },
 
    {
     id: 27,
-    title: " ",
-    date: " ",
+    title: "Steps",
+    date: "1/1/01",
     description: "Story Behind Poem",
-    content: ``,
-    tags: [" "],
+    content: `A child doesn’t know the steps they will take
+I don’t know the mistakes I will make
+And now I’m going in blind
+And I can’t seem to make up my mind
+
+Time to take the reins
+And break out of the chains
+No safety net to catch
+And no person to call a match
+
+I’ve come so far
+And I don’t know where we are
+I’ve made a lot of progress
+And still have a lot of stress
+
+Through ups and downs
+I’ll look around
+But how could I know
+The places I’ll go
+
+And I can’t imagine
+The things that will happen
+But I’ll start the journey and leave the past marks
+And be grateful to have had a spot in your hearts`,
+    tags: ["steps", "growth", "memories", "journey", "change"],
     featured: false
   },
 ];
