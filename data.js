@@ -941,7 +941,7 @@ And leave for tomorrow
 I can’t make lightning strike twice or go back to that time
 So I’m cherrishing the one flash in all brilliance and glory
 And though it’s fading so fast
-That bright light is my story`, // Changed to backticks
+That bright light is my story`,
     tags: ["Lightning", "memories", "story"],
     featured: false
   },
@@ -949,7 +949,7 @@ That bright light is my story`, // Changed to backticks
     id: 23,
     title: "Ebb and Flow",
     date: "9/25/25",
-    description: "This poem reflects on previous thoughts and writings...",
+    description: "This poem reflects on previous thoughts and writings that had been made and the fears and doubts of accepting your own positive messages when in a new situation. The author now looks back at these fears of change and being replaced and knows how natural those concerns are, but how those past connections and experiences were still valuable and strong even if in a new situation, allowing for more connections and change to be made.",
     content: `Look at time go
 Like an ebb and flow
 So much to do
@@ -976,7 +976,7 @@ Left with no emotion or reason
 I guess that means it was also taken away`,
     tags: ["Ebb and Flow", "change", "loss"],
     featured: false
-  }
+  },
 
    {
     id: 24,
