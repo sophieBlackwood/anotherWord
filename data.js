@@ -920,21 +920,62 @@ And be happy with what I got`,
 
     {
     id: 22,
-    title: " ",
-    date: " ",
+    title: "Lightning",
+    date: "7/23/25",
     description: "Story Behind Poem",
-    content: ``,
-    tags: [" "],
+    content: 'I’m wishing I could do things again
+To relive the good and to change the bad
+To have things be perfect
+And make them the way they could have
+
+I want to go back
+To the memories and moments
+To keep them forever
+All the ideal components
+
+I don’t know what’s next but I know what I had
+I want to keep that shine, that radiance, that sparkle
+But that makes it harder to go
+And leave for tomorrow
+
+I can’t make lightning strike twice or go back to that time
+So I’m cherrishing the one flash in all brilliance and glory
+And though it’s fading so fast
+That bright light is my story`,
+    tags: ["Lightning", "memories", "story"],
     featured: false
   },
 
    {
     id: 23,
-    title: " ",
-    date: " ",
-    description: "Story Behind Poem",
-    content: ``,
-    tags: [" "],
+    title: "Ebb and Flow",
+    date: "9/25/25",
+    description: "This poem reflects on previous thoughts and writings that had been made and the fears and doubts of accepting your own positive messages when in a new situation. The author now looks back at these fears of change and being replaced and knows how natural those concerns are but how those past connections and experiences were still valuable and strong even if in a new situation, allowing for more connections and exyto be made as well as the significance of change in life.",
+    content: `Look at time go
+Like an ebb and flow
+So much to do
+So little to say
+
+Know and meet so many people
+But none are really friends 
+Assignments and grades
+Then time is gone and it’s another day
+
+There’s structure and order
+But between it is a mess thanks to me
+I still look at the stars
+But have no one to share that moment with
+
+In a sea of thousands I’m just one
+Too hard to pick out and notice
+Too friends I was a part not a whole
+When all can replace then I’m just the waste
+
+I hold on to something
+Even if it’s basically nothing
+Left with no emotion or reason
+I guess that means it was also taken away`,
+    tags: ["Ebb and Flow", "change", "loss"],
     featured: false
   },
 
