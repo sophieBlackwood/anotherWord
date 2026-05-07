@@ -1105,6 +1105,285 @@ And be grateful to have had a spot in your hearts`,
     tags: ["steps", "growth", "memories", "journey", "change"],
     featured: false
   },
+
+   {
+    id: 28,
+    title: "But I Don’t",
+    date: "3/9/2026",
+    description: "Story Behind Poem",
+    content: `It's hard to know what to do and where to go
+It’s hard to push through and continue the show
+It makes wish I had more of a clue
+I’m trying so hard to know what to do
+But I don’t 
+
+Look around and say it a couple dozen of times
+Maybe if you do it won’t feel like a lie
+Being wrong still feels like a crime
+Pretended to know your personal truth and make it fine
+But I don’t
+
+Beauty all around and the skies are so blue
+Love it all so much and after the colors seem few
+I make some progress then am told I’m a kid
+I wish I had the answers that no one else did
+But I don’t
+
+Lose sense of progress and track of the time
+After pushing through it’s the end of the line
+Time to fix the pieces but can’t tell where they fit
+Everyone seems to make it over the pit
+But I don’t
+
+Have so many people and know that kind of love
+Say it lasts forever but it ends with a shove
+Fears and worries seem so real
+Try to hide it and cover it in a seal
+But I don’t 
+
+Things all seemed so simple, things that I thought were planned
+But in the end it’s hard to understand
+But I don’t
+I don’t know`,
+    tags: ["But I don't", "know", "confusion"],
+    featured: false
+  },
+
+   {
+    id: 29,
+    title: "Poem of a Poem",
+    date: "3/10/2026",
+    description: "Story Behind Poem",
+    content: `Pen, paper, write and sign
+Do it again and do it fine
+Nothing special and nothing such
+Yet something I do all so much
+
+A thought, a process, a rough draft
+Then can’t think of anything after that
+The words flow and then just stop
+In a way to process the mental slop
+
+Memories, emotions, and feelings still
+Sometimes forced or against my will
+Overwhelm and calm again
+Try to go back to then
+
+Learn, teach, end it all
+Do it to prevent the fall
+Power to create, power to destroy
+This is the method I choose to employ 
+
+Hello, goodbye, a simple line
+What have I done with all my time
+I sit and stare and lay it bare
+As I think aloud and choose to share
+
+Think, trace, go back and erase
+Another mistake to hide my face 
+Would anyone care if I chose to share
+My poem of poems and its message today`,
+    tags: ["Poem of a Poem", "writing", "emotion"],
+    featured: false
+  },
+
+   {
+    id: 30,
+    title: "Beauty in the Burden",
+    date: "3/20/2026",
+    description: "Story Behind Poem",
+    content: `What makes a struggle worth talking about?
+How can you succeed and push through doubt?
+Get past the burden, get past the pain
+Do what you can to remain sane
+
+Each burden is different, no body’s the same
+This brings beauty like glistening rain
+A persons resolve, commitment and passion
+Can push them beyond what they could have imagined
+
+No one said it would be easy and when is it ever?
+Despite our preferences we don’t have that power
+You can do great things and it’s ok to cry
+It doesn’t need to be done on the first try
+
+Imperfections bring value to art
+They show humanity and the creators heart
+The struggles and burdens may seem to twist what is true
+But if no one else says it I have faith in you`,
+    tags: ["Beauty in the Burden", "help", "hope"],
+    featured: false
+  },
+
+  {
+    id: 31,
+    title: "Her Poem",
+    date: "3/23/2026",
+    description: "Written for a friend (Brooklyn) when she was at a rough point in life, this poem is a reminder that life isn’t always easy but you don’t have to approach it alone.",
+    content: `Her name isn’t Atlas yet she’s burdened with the world
+And the heaviest burden seems to be her thoughts and her words
+
+Pressure from others and pressure from herself it’s all so tough
+And though pressure can make diamonds I don’t need a diamond in the rough
+
+I can’t say that it will be better but I’ll still offer hope
+If it’s any better I can try to help you cope
+
+Beauty in the rain
+Can’t wash away the pain
+
+But beyond any other fact
+Her name is Brooklyn Poulson and I wouldn’t trade that
+
+We may not know for how long we are here
+But until our time is over I’ll hold that connection dear`,
+    tags: ["Her Poem", "atlas", "friendship"],
+    featured: false
+  },
+
+  {
+    id: 32,
+    title: "Pieces of Emotion",
+    date: "4/5/26",
+    description: "Story Behind Poem",
+    content: `Scattered about are my many emotions
+Tossed and thrown due to commotion
+
+But I’ve found some pieces and it’s providing some comfort
+
+Pieces might not make a whole feeling
+And often times the thoughts are still reeling
+
+Pieces that are found with my friends. 
+Each one holding a part of my soul within
+
+Shinning lights high in the night and the dark edges gone from my sight
+
+A poem that rhymes and a dozen that don’t 
+What really matters is the message and note
+
+A page full of thoughts and messed up words
+What else is better than to be with those who still know
+
+Though I’m in pieces and I’m still always lost
+The fact you hold those pieces means I’ll always be close
+
+Despite any distance, feeling, or time
+Never forget that I’ll be close by
+
+I still feel despite the confusion
+And I’m happy to have reached that conclusion`,
+    tags: ["Pieces of Emotion", "commotion",  "comfort"],
+    featured: false
+  },
+
+   {
+    id: 33,
+    title: "Lessons of Reflections",
+    date: "4/16/26",
+    description: "Story Behind Poem",
+    content: `Look in the mirror and how do you chose?
+One day is over the next pays its dues
+
+We all have answers yet questions remain
+And what comes next is never the same
+
+Each song is a poem heartfelt and loud
+So so sing each note off key and proud
+
+Looking back what do you see
+Countless people standing next to me
+
+A mixture of feelings starts to arise
+As they are mixed with the sound of different goodbyes
+
+Reflections holding my failures, regrets, and mistakes
+But also hold my growth, lessons, and strengths
+
+Reflection is difficult and feels like a danger
+When often we look and we see only a stranger
+
+Despite the fact my reflection is never perfect
+I’ll find something that’s good whenever I check`,
+    tags: ["Lessons of Reflections", "beauty", "individuality"],
+    featured: true
+  },
+
+  {
+    id: 34,
+    title: "Rehash",
+    date: "4/19/26",
+    description: "Story Behind Poem",
+    content: `Share the same message, mean the same thing
+Does it lower the impact or cause it to sting?
+
+Repeat the value, lose the context
+Does it get through the negative comments?
+
+No new patters and no new thoughts
+As it’s done over again and lowers its true cost
+
+It’s the same expression, the same mistaken thought
+If that’s the problem how do we get back what was lost?
+
+Remake the remake lose the soul
+With so little emotion can we still know?
+
+If it still has meaning then it still has worth
+But is it possible to know if it has reached that goal?
+
+Will the art mean something if it just repeats itself
+In a rehash of a rehash and stagnation of the growth`,
+    tags: ["Rehash", "message", "change"],
+    featured: false
+  },
+
+   {
+    id: 34,
+    title: "Dancing with a Knife",
+    date: "4/19/26",
+    description: "Story Behind Poem",
+    content: `Dancing on the edge is such a pretty sight
+But where will it fall if its cut by the knife
+
+Cut into pieces as the world begins to shake
+And leaves the scattered parts in every little place
+
+Shredded are the remains after each perfect motion
+Leaving scars behind but hidden beyond others sight
+
+A dancer so beautiful but do they even see
+As they dance they’re cut just like you and me
+
+Dancing through life teetering on the edge
+None of us see unless we loose our heads
+
+Spilt down the middle of insanity and sane
+Continue the dance to keep the thoughts away
+
+It might just be an expression but oh it’s one so true
+But please don’t let it take me away from you
+
+An edge made to divide and separate the rest
+This is my humble plight to save us from this mess
+
+No dancer should endure those pains that it brings
+But changing that’s not easy as it may first seem
+
+The dance can’t be stopped or the blade sinks deeper
+And the result would be crimson as its cut in many different meters
+
+We can work on it together change this rusted blade
+And as the dance continues the rest will slowly fade
+
+Change the platform to one that prevents the needless pain
+In this dance called life we perform and connections change the stage
+
+As lives are opened and new blades are engaged
+We all can help each other put the knife away`,
+    tags: ['Dancing with a Knife', 'pain', 'scars'],
+    featured: false
+  },
 ];
 
 // Helper for the homepage logic
