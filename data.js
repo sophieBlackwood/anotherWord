@@ -949,7 +949,7 @@ That bright light is my story`,
     id: 23,
     title: "Ebb and Flow",
     date: "9/25/25",
-    description: "This poem reflects on previous thoughts and writings that had been made and the fears and doubts of accepting your own positive messages when in a new situation. The author now looks back at these fears of change and being replaced and knows how natural those concerns are, but how those past connections and experiences were still valuable and strong even if in a new situation, allowing for more connections and change to be made.",
+    description: "This poem reflects on previous thoughts and writings that had been made and the fears and doubts of accepting your own positive messages when in a new situation. The author now looks back at these fears and knows how natural those concerns are, but how those past connections and experiences were still valuable and strong.",
     content: `Look at time go
 Like an ebb and flow
 So much to do
@@ -1313,6 +1313,7 @@ I’ll find something that’s good whenever I check`,
     id: 34,
     title: "Rehash",
     date: "4/19/26",
+    description: "",
     content: `Share the same message, mean the same thing
 Does it lower the impact or cause it to sting?
 
@@ -1341,6 +1342,7 @@ In a rehash of a rehash and stagnation of the growth`,
     id: 34,
     title: "Dancing with a Knife",
     date: "4/19/26",
+     description: "",
     content: `Dancing on the edge is such a pretty sight
 But where will it fall if its cut by the knife
 
