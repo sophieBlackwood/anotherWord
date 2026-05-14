@@ -67,7 +67,7 @@ Will always be blessed to me.`,
     id: 2,
     title: "Shout into Nothing",
     date: "2/3/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `It’s a shout into nothing
 To let out the grief and frustration and pain 
 A plea to finally be something 
@@ -105,7 +105,7 @@ Is what keeps me here today`,
     id: 3,
     title: "Full System Error",
     date: "2/10/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Brain is shutting down, senses are wrong 
 World is changing, what is going on?
 Why can’t I think, why am I not strong
@@ -132,7 +132,7 @@ In a broken system that’s flawed`,
     id: 4,
     title: "Contradiction",
     date: "6/7/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Knowing what to do yet never knowing how to do it
 planning for the future but there’s always a part that won’t fit
 
@@ -162,7 +162,7 @@ And so we know that life is that
     id: 5,
     title: "Emotions Spinning",
     date: "4/6/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Back and forth, up and down
 These are my emotions as my head spins around
 The time keeps ticking
@@ -204,7 +204,7 @@ That nothing makes sense to me
     id: 6,
     title: "Flame",
     date: "5/1/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `It’s burning bright
 Throughout the night
 A dancing light
@@ -238,7 +238,7 @@ And for the person it frames
     id: 7,
     title: "Flaw",
     date: "6/27/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `I know of one certain law
 That every single thing has a flaw
 
@@ -338,7 +338,7 @@ But I’ll never leave these flowers forgotten in the past
     id: 9,
     title: "Foggy Path",
     date: "5/1/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Walking down a foggy path
 I can’t see my way
 Not sure where I’m going
@@ -459,7 +459,7 @@ Honest and open, I still have you with me`,
     id: 12,
     title: "Is It?",
     date: "5/13/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Is it insanity
 To never truly know
 Is it crazy
@@ -532,7 +532,7 @@ Of a life worth living`,
     id: 13,
     title: "Luck",
     date: "6/15/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `I guess it’s time to roll the dice
 Every choice has a chance and price
 
@@ -573,7 +573,7 @@ But it’s not the same as it was before`,
     id: 14,
     title: "Mistake",
     date: "5/28/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `I’ve made a mistake
 And I don’t want to again
 I’m afraid that I’ll break
@@ -621,7 +621,7 @@ But maybe the best that can happen`,
     id: 15,
     title: "Moments in Memory",
     date: "5/31/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `“What?
 It could be many things
 Fact
@@ -674,7 +674,7 @@ Of a blessing and these things that will last`,
     id: 16,
     title: "Symbol",
     date: "5/7/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `A symbol can be anything 
 A picture, feeling or sign
 They all represent something
@@ -717,7 +717,7 @@ For letting me be here`,
     id: 17,
     title: "Time Runs Out",
     date: "4/7/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Tick, here we go
 Tick, I already know
 Tick, look at the clock
@@ -749,7 +749,7 @@ Tick, of the time I host
     id: 18,
     title: "Unknown",
     date: "5/22/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `I’m wide awake past midnight
 As I’m writing here I sit
 Wrestling my thoughts I’ll fight
@@ -803,7 +803,7 @@ But the truth still plainly hits
     id: 19,
     title: "Unravel",
     date: "4/23/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `I’m stuck in my unravel
 Being pulled along by my string
 No destination as I travel
@@ -841,7 +841,7 @@ and I’ve come apart at last`,
     id: 20,
     title: "Wishes",
     date: "6/9/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `I’m making a wish
 For some many things
 Part is just hopes for this
@@ -889,7 +889,7 @@ And be happy with what I got`,
     id: 21,
     title: "Bittersweet",
     date: "7/14/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Nostalgia is a beautiful liar
     It's a promise of the past that can't be recaptured
     An exact picture that is always different
@@ -922,7 +922,7 @@ And be happy with what I got`,
     id: 22,
     title: "Lightning",
     date: "7/23/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `I’m wishing I could do things again
 To relive the good and to change the bad
 To have things be perfect
@@ -982,7 +982,7 @@ I guess that means it was also taken away`,
     id: 24,
     title: "Stars in the Night",
     date: "8/13/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Some of the best moments
 Happen late in the night
 When connections are strengthened
@@ -1015,7 +1015,7 @@ Filled with stars in the night`,
     id: 25,
     title: "Thought I Knew",
     date: "9/2/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `I thought I knew What to do
 I thought I knew about you
 I thought nothing would have to change
@@ -1044,7 +1044,7 @@ But I thought I knew and it went bad`,
     id: 26,
     title: "Symphony",
     date: "9/12/25",
-    description: "Story Behind Poem",
+    description: "",
     content: `Life goes on at a steady tempo
 In seconds, minutes, hours, days, weeks, months and years
 You know the rhythm doesn’t change
@@ -1077,7 +1077,7 @@ That’s what make up the symphony of a life`,
     id: 27,
     title: "Steps",
     date: "1/1/01",
-    description: "Story Behind Poem",
+    description: "",
     content: `A child doesn’t know the steps they will take
 I don’t know the mistakes I will make
 And now I’m going in blind
@@ -1110,7 +1110,7 @@ And be grateful to have had a spot in your hearts`,
     id: 28,
     title: "But I Don’t",
     date: "3/9/2026",
-    description: "Story Behind Poem",
+    description: "",
     content: `It's hard to know what to do and where to go
 It’s hard to push through and continue the show
 It makes wish I had more of a clue
@@ -1153,7 +1153,7 @@ I don’t know`,
     id: 29,
     title: "Poem of a Poem",
     date: "3/10/2026",
-    description: "Story Behind Poem",
+    description: "",
     content: `Pen, paper, write and sign
 Do it again and do it fine
 Nothing special and nothing such
@@ -1191,7 +1191,7 @@ My poem of poems and its message today`,
     id: 30,
     title: "Beauty in the Burden",
     date: "3/20/2026",
-    description: "Story Behind Poem",
+    description: "",
     content: `What makes a struggle worth talking about?
 How can you succeed and push through doubt?
 Get past the burden, get past the pain
@@ -1245,7 +1245,7 @@ But until our time is over I’ll hold that connection dear`,
     id: 32,
     title: "Pieces of Emotion",
     date: "4/5/26",
-    description: "Story Behind Poem",
+    description: "",
     content: `Scattered about are my many emotions
 Tossed and thrown due to commotion
 
@@ -1281,7 +1281,7 @@ And I’m happy to have reached that conclusion`,
     id: 33,
     title: "Lessons of Reflections",
     date: "4/16/26",
-    description: "Story Behind Poem",
+    description: "",
     content: `Look in the mirror and how do you chose?
 One day is over the next pays its dues
 
@@ -1313,7 +1313,7 @@ I’ll find something that’s good whenever I check`,
     id: 34,
     title: "Rehash",
     date: "4/19/26",
-    description: "Story Behind Poem",
+    description: "",
     content: `Share the same message, mean the same thing
 Does it lower the impact or cause it to sting?
 
@@ -1342,7 +1342,7 @@ In a rehash of a rehash and stagnation of the growth`,
     id: 34,
     title: "Dancing with a Knife",
     date: "4/19/26",
-    description: "Story Behind Poem",
+    description: "",
     content: `Dancing on the edge is such a pretty sight
 But where will it fall if its cut by the knife
 
