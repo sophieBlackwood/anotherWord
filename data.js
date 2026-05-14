@@ -1313,7 +1313,6 @@ I’ll find something that’s good whenever I check`,
     id: 34,
     title: "Rehash",
     date: "4/19/26",
-    description: "",
     content: `Share the same message, mean the same thing
 Does it lower the impact or cause it to sting?
 
@@ -1342,7 +1341,6 @@ In a rehash of a rehash and stagnation of the growth`,
     id: 34,
     title: "Dancing with a Knife",
     date: "4/19/26",
-    description: "",
     content: `Dancing on the edge is such a pretty sight
 But where will it fall if its cut by the knife
 
